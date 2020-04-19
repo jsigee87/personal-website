@@ -1,0 +1,41 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "hugo-goa"
+
+[[menu.main]]
+name = "about"
+identifier = "about"
+weight = 200
+url = "/about/"
+
+[[menu.main]]
+name = "writing"
+identifier = "writing"
+weight = 200
+url = "/writing/"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+author = "John Sigmon"
+title = "John Sigmon"
+
+## Site Settings
+[params]
+author = "John Sigmon"
+intro = "Startup Guru Extraordinaire"
+description = "Description here"
+authorimage = "crunch.png"
+dateformat = "Jan 2, 2006"
+
+## Social Accounts
+[params.social]
+github = "jsigee87"
+instagram = "jhnsigmon"
+linkedin = "john-sigmon"
+twitter = "JohnSigmon"
+#goodreads = "<username>"
+#strava = "<username>"
+email = "johnsigmon@gmail.com"
