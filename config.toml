@@ -15,6 +15,12 @@ identifier = "writing"
 weight = 200
 url = "/writing/"
 
+[[menu.main]]
+name = "technical writing"
+identifier = "technical-writing"
+weight = 200
+url = "/technical-writing/"
+
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
