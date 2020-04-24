@@ -1,5 +1,8 @@
-
-Why Grading On A Curve Is Bad For Everyone
+---
+title: "Grading On A Curve Is Bad"
+date: 2020-04-19
+draft: true
+---
 
 1. It frees students from responsibility
 2. It frees professors from responsibility
@@ -15,4 +18,4 @@ To address number three, I must admit that there are certain parts of life where
 When you take your car to the local mechanic to get your brakes fixed, which scale do you want them to be graded on? What about when your company hires a marketing firm to bring in more business? Do you want them to hit the targets you give them, or just be better than an alternative firm? The examples go on and on, and easily extend to engineering disciplines. Engineering is solutions based (not a curve.) Engineers are given tasks with set parameters that must be met. These parameters rarely change based on your competition.
 By far, the most egregious offense of grading on a curve is the destruction of an open source, collaborative environment. Study after study shows the virtues of learning in an open source environment. Doesn’t it just make sense? Given a finite set of information the students must learn in a course, why can’t they work together to get their faster and easier? Instead they are forced into isolation, as helping a fellow student is equivalent to hurting their own grades. This should, by far, be the most convincing point against this grading scheme. There really is no reason that everyone can’t earn an A.
 
-Originally written 8/12/17
+This was originally written 8/12/17.

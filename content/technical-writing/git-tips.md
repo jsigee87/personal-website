@@ -1,4 +1,8 @@
-# Using Git Successfully
+---
+title: "Git Tips"
+date: 2020-04-19
+draft: true
+---
 
 ## Basic Git Usage
 
@@ -77,3 +81,6 @@ If you already made a commit, first make your amended changes, then stage them w
 
 A possible branching strategy for your git project is called trunk-based development. It has become very popular within the DevOps community. Google provides a great blog post on this [here](https://cloud.google.com/solutions/devops/devops-tech-trunk-based-development).
 
+---
+
+This is a collection of notes from my personal archives accumulated over 2018 and 2019.
