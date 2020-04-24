@@ -161,9 +161,9 @@ SAMPLE_LIST=(
 )
 
 
-for f in "${SAMPLE_LIST[@]}"
+for item in "${SAMPLE_LIST[@]}"
 do
-    # Access the filename like this
-    echo "${f}"
+    # Access the item like this
+    echo "${item}"
 done
 ```
