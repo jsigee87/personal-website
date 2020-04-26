@@ -1,7 +1,6 @@
 ---
 title: "Grading On A Curve Is Bad"
-date: 2020-04-19
-draft: true
+date: 2020-04-26
 ---
 
 1. It frees students from responsibility

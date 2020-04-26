@@ -1,7 +1,6 @@
 ---
 title: "Following Inspiration"
-date: 2020-04-19
-draft: true
+date: 2020-04-26
 ---
 
 For me, life has always been about doing what inspires me, in some way shape or form. I often had to compromise what inspired me in order to survive and pay my bills, and what inspired me was not even always legal. Regardless, I have always been too stubborn to not do what I wanted.

@@ -1,7 +1,6 @@
 ---
 title: "Time and Money"
-date: 2020-04-19
-draft: true
+date: 2020-04-26
 ---
 
 Time is the most valuable thing that anyone can ever "possess". Money’s primary value is to buy you more time. Money can buy you more time when you outsource household chores or labor, have the freedom to take a part time job, have the freedom to start a company or non-profit, or even when you retire.

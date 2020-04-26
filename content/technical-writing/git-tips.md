@@ -1,7 +1,10 @@
 ---
 title: "Git Tips"
-date: 2020-04-19
-draft: true
+date: 2020-04-26
+slug: git-tips
+categories:
+- development
+- git
 ---
 
 ## Basic Git Usage

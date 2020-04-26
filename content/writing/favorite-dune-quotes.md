@@ -1,7 +1,6 @@
 ---
 title: "Favorite Quotes From Dune"
-date: 2020-04-19
-draft: true
+date: 2020-04-26
 ---
 
 If you have not read Dune, drop what you are doing and go read it right now. It is a classic for a reason. Dune effortlessly blends scifi with economics, sociology, environmentalism, and religion. It is truly a masterpiece of writing. 

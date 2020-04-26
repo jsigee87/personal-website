@@ -31,9 +31,9 @@ title = "John Sigmon"
 ## Site Settings
 [params]
 author = "John Sigmon"
-intro = "Startup Guru Extraordinaire"
-description = "Description here"
-authorimage = "crunch.png"
+intro = "Engineer"
+#description = "Description here"
+authorimage = "redrock.jpg"
 dateformat = "Jan 2, 2006"
 
 ## Social Accounts

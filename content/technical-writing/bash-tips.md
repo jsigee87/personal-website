@@ -1,7 +1,10 @@
 ---
 title: "Bash Tips"
-date: 2020-04-19
-draft: true
+date: 2020-04-26
+slug: bash-tips
+categories:
+- development
+- bash
 ---
 
 #### Redirects

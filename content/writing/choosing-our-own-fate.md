@@ -1,7 +1,6 @@
 ---
 title: "Choosing Our Own Fate"
-date: 2020-04-19
-draft: true
+date: 2020-04-26
 ---
 
 I've been thinking about death in climbing and more generally why people climb and how this relates to our course in life. In the HBO series Westworld there is a quote about how death is true, and another quote about how we must all be allowed to choose our own fate. What is it that drives us to climb even though you can die while doing it? Part of the value in it for me is to know my limits and to push myself. I want to know how strong I can be physically and mentally. I want to face impossible challenges and go through the logistics of preparation and planning necessary to mitigate the risk. I want to boil it down and eliminate the possibility of human error. I want to wrestle with reducing the risk of objective hazards that are unavoidable. Only by pushing through our comfort zone can we grow, and planning and executing these adventures forces me out of my comfort zone every time. If we don't push through our comfort zones we become stagnant. We don't learn about ourselves. We look outwards for validation not inwards. Our lives become a game of comparison.
