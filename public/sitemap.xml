@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/about/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/bash/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-writing/bash-tips/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/writing/choosing-our-own-fate/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/writing/climbing-and-mountaineering-videos/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/development/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/writing/favorite-dune-quotes/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/writing/following-my-inspiration/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/git/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-writing/git-tips/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/writing/grading-on-a-curve/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-writing/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/writing/time-and-money/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/writing/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+  </url>
+  
+</urlset>
