@@ -2,6 +2,7 @@ baseURL = "http://johnsigmon.me/"
 languageCode = "en-us"
 title = "John Sigmon"
 theme = "hugo-goa"
+toc = false
 
 [[menu.main]]
 name = "about"
@@ -16,10 +17,10 @@ weight = 200
 url = "/writing/"
 
 [[menu.main]]
-name = "technical writing"
-identifier = "technical-writing"
+name = "technical"
+identifier = "technical"
 weight = 200
-url = "/technical-writing/"
+url = "/technical/"
 
 contentdir = "content"
 layoutdir = "layouts"
