@@ -4,6 +4,7 @@ date: 2020-04-26
 categories:
 - development
 - bash
+toc: false
 ---
 
 ## Redirects

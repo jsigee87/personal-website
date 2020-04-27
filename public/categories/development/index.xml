@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>development on John Sigmon</title>
-    <link>http://johnsigmon.me/categories/development/</link>
+    <link>https://www.johnsigmon.me/categories/development/</link>
     <description>Recent content in development on John Sigmon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://johnsigmon.me/categories/development/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.johnsigmon.me/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bash Tips</title>
-      <link>http://johnsigmon.me/technical/bash-tips/</link>
+      <link>https://www.johnsigmon.me/technical/bash-tips/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/technical/bash-tips/</guid>
+      <guid>https://www.johnsigmon.me/technical/bash-tips/</guid>
       <description>Redirects All those fun redirect operators are outlined really well in this Stack Overflow post.
 Grep, Awk, and Sed Grep is one of the most flexible and useful Linux utilities, Awk is actually a full blown programming language, and Sed isn&amp;rsquo;t too bad either. This 9 page overview gives some good tips to get started without being overly long and verbose.
 Comparison Operators The cases of comparing strings versus comparing variables are handled a little differently in bash.</description>
@@ -24,10 +24,10 @@ Comparison Operators The cases of comparing strings versus comparing variables a
     
     <item>
       <title>Git Tips</title>
-      <link>http://johnsigmon.me/technical/git-tips/</link>
+      <link>https://www.johnsigmon.me/technical/git-tips/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/technical/git-tips/</guid>
+      <guid>https://www.johnsigmon.me/technical/git-tips/</guid>
       <description>Basic Git Usage A great reference for basic git usage, including push, pull, merge, and other operations is Travis Swicegood&amp;rsquo;s &amp;ldquo;Pragmatic Guide to Git&amp;rdquo;.
 Julia Evans also has a wonderful and easy to understand introduction to solving common user errors within git in a comic format. You can find her work here.
 The .gitignore Atlassian provides a great tutorial on .gitignore files here explaining what they are and how to use them.</description>
