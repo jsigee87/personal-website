@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+
+<base href="http://johnsigmon.me/">
+
+<title>
+  John Sigmon - Git Tips 
+</title>
+
+<meta name="generator" content="Hugo 0.69.0" />
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="http://johnsigmon.me/css/main.css">
+<link rel="stylesheet" href="http://johnsigmon.me/css/custom.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body lang="en-us">
+<div class="container">
+
+
+<header class="row text-left title">
+  <h1 class="title">Git Tips</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+        PUBLISHED ON APR 26, 2020 
+      
+      
+      
+      —
+      
+      
+      <a class="meta" href="/categories/development">DEVELOPMENT</a>, 
+      
+      <a class="meta" href="/categories/git">GIT</a>
+      
+      
+      
+    </h6>
+  </div>
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-git-usage">Basic Git Usage</a></li>
+    <li><a href="#the-gitignore">The .gitignore</a></li>
+    <li><a href="#writing-commit-messages">Writing Commit Messages</a></li>
+    <li><a href="#setting-meld-as-your-merge-tool">Setting Meld as Your Merge Tool</a></li>
+    <li><a href="#changing-the-default-text-editor">Changing the Default Text Editor</a></li>
+    <li><a href="#using-git-commit---amend">Using git commit &ndash;amend</a></li>
+    <li><a href="#trunk-based-development">Trunk Based Development</a></li>
+  </ul>
+</nav>
+    
+    <h2 id="basic-git-usage">Basic Git Usage</h2>
+<p>A great reference for basic git usage, including push, pull, merge, and other operations is Travis Swicegood&rsquo;s <a href="https://pragprog.com/book/pg_git/pragmatic-guide-to-git">&ldquo;Pragmatic Guide to Git&rdquo;</a>.</p>
+<p>Julia Evans also has a wonderful and easy to understand introduction to solving common user errors within git in a comic format. You can find her work <a href="https://wizardzines.com/zines/oh-shit-git/">here</a>.</p>
+<h2 id="the-gitignore">The .gitignore</h2>
+<p>Atlassian provides a great tutorial on <code>.gitignore</code> files <a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore">here</a> explaining what they are and how to use them. You can find a collection of useful <code>.gitignore</code> files <a href="https://github.com/github/gitignore">here</a>.</p>
+<h2 id="writing-commit-messages">Writing Commit Messages</h2>
+<p>Aside from the basic <code>git commit -m &quot;message&quot;</code> people often think little about their commit messages until they have to revert a commit. If you want a little more insight into writing commit messages, Mattej Jellus has a concise post about it <a href="https://juffalow.com/other/write-good-git-commit-message">here</a>.</p>
+<h2 id="setting-meld-as-your-merge-tool">Setting Meld as Your Merge Tool</h2>
+<p>If you work on Mac or Linux, <a href="https://meldmerge.org/">Meld</a> is a great visual diff tool (although it can be tricky to set up on Mac sometimes.) You can configure git to use Meld as your diff tool any time you have to diff or merge.</p>
+<p>To meld as the diff tool, add the following to your .gitconfig file.</p>
+<pre><code>[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool &quot;meld&quot;]
+    cmd = meld &quot;$LOCAL&quot; &quot;$REMOTE&quot;
+</code></pre><p>To meld as the merge tool, add the following to your .gitconfig file.</p>
+<pre><code>[merge]
+    tool = meld
+[mergetool &quot;meld&quot;]
+    cmd = meld &quot;$LOCAL&quot; &quot;$MERGED&quot; &quot;$REMOTE&quot; --output &quot;$MERGED&quot;
+</code></pre><p>When using the meld tool to merge, merge as you would normally in git, with <code>git merge branch_name</code>, then after git lists the merge info, <code>git mergetool</code>. Git will ask you file by file if you want to keep the remote or local version for deleted files. For modified files, meld will be launched. Each meld window is a merge for one file. On the left pane you will see the current local file. On the right pane you will see the remote file. In the middle pane is the merged result. Use meld as normal by transfering everything you want to keep to the middle pane. Save and exit the window.</p>
+<h2 id="changing-the-default-text-editor">Changing the Default Text Editor</h2>
+<p>If you are not a nano user, you may want to change the default text editor for git. This example shows how to change it to vim.</p>
+<p>To set Vim as default for Git only, do <em>ONE OF</em> the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.editor <span style="color:#e6db74">&#34;vim&#34;</span>
+</code></pre></div><p>or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;export GIT_EDITOR=vim&#34;</span> &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre></div><p>To set Vim as default for Git <em>and</em> other programs, do the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;export VISUAL=vim&#34;</span> &gt;&gt; ~/.bashrc
+echo <span style="color:#e6db74">&#34;export EDITOR=\&#34;</span>$VISUAL<span style="color:#e6db74">\&#34;&#34;</span> &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre></div><p>Note that on Mac, you will need to append to your <code>.bashprofile</code> instead of <code>.bashrc</code>. It should be in the same location.</p>
+<h2 id="using-git-commit---amend">Using git commit &ndash;amend</h2>
+<p>&ldquo;Git commit amend&rdquo; is useful for things like typos or if you botched your commit message. Be very careful about amending a commit already pushed to the remote repository, this should very rarely be done.</p>
+<p>If you already made a commit, first make your amended changes, then stage them with <code>git add &lt;file&gt;</code>. Then run <code>git commit --amend</code>, which should bring up the message from the commit you are trying to amend. If you have not yet pushed your changes, then just push as normal. Otherwise if you are amending a commit already in the remote, you will need to use <code>git push --force &lt;branch&gt;</code>. Again, you should almost never be using <code>push --force</code>, proceed with caution.</p>
+<h2 id="trunk-based-development">Trunk Based Development</h2>
+<p>A possible branching strategy for your git project is called trunk-based development. It has become very popular within the DevOps community. Google provides a great blog post on this <a href="https://cloud.google.com/solutions/devops/devops-tech-trunk-based-development">here</a>.</p>
+<hr>
+<p>This is a collection of notes from my personal archives accumulated over 2018 and 2019.</p>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  
+  
+  <span><a class="menu-item" href="/technical">technical</a></span>
+  
+  
+  <span><a class="menu-item" href="http://johnsigmon.me/technical/bash-tips/"> | next &gt;</a></span>
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="http://johnsigmon.me/">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  <hr />
+  
+</footer>
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
+
+

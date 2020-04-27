@@ -23,10 +23,10 @@
     
     <item>
       <title>Bash Tips</title>
-      <link>http://johnsigmon.me/technical-writing/bash-tips/</link>
+      <link>http://johnsigmon.me/technical/bash-tips/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/technical-writing/bash-tips/</guid>
+      <guid>http://johnsigmon.me/technical/bash-tips/</guid>
       <description>Redirects All those fun redirect operators are outlined really well in this Stack Overflow post.
 Grep, Awk, and Sed Grep is one of the most flexible and useful Linux utilities, Awk is actually a full blown programming language, and Sed isn&amp;rsquo;t too bad either. This 9 page overview gives some good tips to get started without being overly long and verbose.
 Comparison Operators The cases of comparing strings versus comparing variables are handled a little differently in bash.</description>
@@ -72,10 +72,10 @@ When I reflect on the influence this behavior has had in my life, I can find its
     
     <item>
       <title>Git Tips</title>
-      <link>http://johnsigmon.me/technical-writing/git-tips/</link>
+      <link>http://johnsigmon.me/technical/git-tips/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/technical-writing/git-tips/</guid>
+      <guid>http://johnsigmon.me/technical/git-tips/</guid>
       <description>Basic Git Usage A great reference for basic git usage, including push, pull, merge, and other operations is Travis Swicegood&amp;rsquo;s &amp;ldquo;Pragmatic Guide to Git&amp;rdquo;.
 Julia Evans also has a wonderful and easy to understand introduction to solving common user errors within git in a comic format. You can find her work here.
 The .gitignore Atlassian provides a great tutorial on .gitignore files here explaining what they are and how to use them.</description>
@@ -96,7 +96,8 @@ The .gitignore Atlassian provides a great tutorial on .gitignore files here expl
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://johnsigmon.me/writing/time-and-money/</guid>
-      <description>Time is the most valuable thing that anyone can ever &amp;ldquo;possess&amp;rdquo;. Money’s primary value is to buy you more time. Money can buy you more time when you outsource household chores or labor, have the freedom to take a part time job, have the freedom to start a company or non-profit, or even when you retire. Due to my belief, I sometimes cause myself trouble by passing judgement on those that waste their time.</description>
+      <description>Time is the most valuable thing that anyone can ever &amp;ldquo;possess&amp;rdquo;. Money’s primary value is to buy you more time. Money can buy you more time when you outsource household chores or labor, have the freedom to take a part time job, have the freedom to start a company or non-profit, or even when you retire.
+Due to my belief, I sometimes cause myself trouble by passing judgement on those that waste their time.</description>
     </item>
     
   </channel>

@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git on John Sigmon</title>
-    <link>http://johnsigmon.me/categories/git/</link>
-    <description>Recent content in git on John Sigmon</description>
+    <title>Technicals on John Sigmon</title>
+    <link>http://johnsigmon.me/technical/</link>
+    <description>Recent content in Technicals on John Sigmon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://johnsigmon.me/categories/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://johnsigmon.me/technical/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bash Tips</title>
+      <link>http://johnsigmon.me/technical/bash-tips/</link>
+      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://johnsigmon.me/technical/bash-tips/</guid>
+      <description>Redirects All those fun redirect operators are outlined really well in this Stack Overflow post.
+Grep, Awk, and Sed Grep is one of the most flexible and useful Linux utilities, Awk is actually a full blown programming language, and Sed isn&amp;rsquo;t too bad either. This 9 page overview gives some good tips to get started without being overly long and verbose.
+Comparison Operators The cases of comparing strings versus comparing variables are handled a little differently in bash.</description>
+    </item>
     
     <item>
       <title>Git Tips</title>
