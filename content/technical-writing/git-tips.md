@@ -1,7 +1,6 @@
 ---
 title: "Git Tips"
 date: 2020-04-26
-slug: git-tips
 categories:
 - development
 - git

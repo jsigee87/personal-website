@@ -1,7 +1,6 @@
 ---
 title: "Bash Tips"
 date: 2020-04-26
-slug: bash-tips
 categories:
 - development
 - bash
