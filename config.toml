@@ -1,6 +1,6 @@
 baseURL = "http://johnsigmon.me/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "John Sigmon"
 theme = "hugo-goa"
 
 [[menu.main]]
@@ -24,6 +24,7 @@ url = "/technical-writing/"
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
+staticDir = "static"
 
 author = "John Sigmon"
 title = "John Sigmon"
