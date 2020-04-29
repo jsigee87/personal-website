@@ -4,6 +4,7 @@ date: 2020-04-26
 ---
 
 My name is John Sigmon and I am currently a data engineer. I am passionate about:
+
 1. Creating useful things
 2. Sharing what I know
 3. Learning more about myself and the world
