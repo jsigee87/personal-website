@@ -8,11 +8,11 @@ categories:
 toc: false
 ---
 
-I want to share a command line tool I have recently learned how to put to good use. `jq` provides a fantastic and fast way to manipulate and manage JSON files, especially when they become very large. I want to give a quick overview of how it works and then show some examples.
+I want to share a command line tool I have recently learned. `jq` provides a fantastic and fast way to manipulate and manage JSON files, especially when they become very large. I want to give a quick overview of how it works and then show some examples.
 
 ## Giving jq input and output
 
-Jq works as a filter, which means that it requires input and will give you output. The handiest way to work with it is via redirects. In the simplest case if your input comes from a file there is no redirect necessary:
+`jq` works as a filter, which means that it requires input and will give you output. The handiest way to work with it is via redirects. In the simplest case if your input comes from a file there is no redirect necessary:
 
 ```bash
 jq --some-jq-flag  myfile.json
@@ -40,8 +40,10 @@ curl https://my-website | jq --some-jq-flag | wc -l
 
 ## But What Does It Do?
 
-#### Pretty Print
-Perhaps one of it’s most common and easy to see uses is to “pretty print” JSON data. We can tell `jq` to use the identity filter (`.`) (i.e. do not alter the data) and it will default to pretty print This is accomplished via the following:
+### Pretty Print
+
+Perhaps one of it’s most common and easy to see uses is to “pretty print” JSON data. We can tell `jq` to use the identity filter (`.`) (i.e. do not alter the data) and it will default to pretty print. This is accomplished via the following:
+
 ```bash
 some_input | jq '.' 
 ```
@@ -53,7 +55,7 @@ my_script_that_prints_json.py > tmp.json
 jq '.' < tmp.json
 ```
 
-#### Array to Non-array and Back
+### Array to Non-array and Back
 
 Say someone has given you a JSON file that contains many objects, but they are not comma separated, and have no brackets to identify it as an array (this happens often.) You can read the file in “slurp” mode with the identity filter and `jq` will create an array out of your objects.
 
@@ -67,9 +69,9 @@ Now imagine the opposite- you have your array of JSON objects but you want to �
 jq '.[]'  array.json > non_array.json
 ```
 
-#### Converting to JSONL
+### Converting to JSONL
 
-Say you need to convert your array of JSON objects into [JSONL format](http://jsonlines.org/), or “new line delimited JSON.” A common use case for this for me is converting JSON into an appropriate format to be loaded into BigQuery (Google’s basic SQL database in GCP.) The appropriate flag here is the *compact* flag:
+Say you need to convert your array of JSON objects into [JSONL format](http://jsonlines.org/), or “new line delimited JSON.” A common use case for this (for me) is converting JSON into an appropriate format to be loaded into BigQuery (Google’s basic SQL database in GCP.) The appropriate flag here is the *compact* flag:
 
 ```bash
 jq -c '.' non_compact.json > my_new_file.jsonl
@@ -77,7 +79,7 @@ jq -c '.' non_compact.json > my_new_file.jsonl
 
 (don`t forget file extensions are [“meaningless”](https://askubuntu.com/questions/803434/do-file-extensions-have-any-purpose-for-the-operating-system) in a UNIX-style system.)
 
-#### Accessing Keys and Data
+### Accessing Keys and Data
 
 Say you are still getting a file with an array of JSON objects and want to know how many objects are in your array? We can use the identity filter and the built in `jq` length function:
 
@@ -114,7 +116,7 @@ jq '.object' data.json
 
 This will print out the value associated with that key!
 
-#### More information
+### More information
 I have barely scratched the surface of what you can do with this tool. Feel free to check out the excellent documentation on [the website](https://stedolan.github.io/jq/), and you can always run `jq --help` or `man jq`.
 
 

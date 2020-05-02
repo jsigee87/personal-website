@@ -6,10 +6,20 @@
     <description>Recent content in Technicals on John Sigmon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.johnsigmon.me/technical/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JSON From The Command Line</title>
+      <link>https://www.johnsigmon.me/technical/jq/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.johnsigmon.me/technical/jq/</guid>
+      <description>I want to share a command line tool I have recently learned. jq provides a fantastic and fast way to manipulate and manage JSON files, especially when they become very large. I want to give a quick overview of how it works and then show some examples.
+Giving jq input and output jq works as a filter, which means that it requires input and will give you output. The handiest way to work with it is via redirects.</description>
+    </item>
     
     <item>
       <title>Bash Tips</title>

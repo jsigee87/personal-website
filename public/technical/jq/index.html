@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+
+<base href="https://www.johnsigmon.me/">
+
+<title>
+  John Sigmon - JSON From The Command Line 
+</title>
+
+<meta name="generator" content="Hugo 0.69.0" />
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.johnsigmon.me/css/main.css">
+<link rel="stylesheet" href="https://www.johnsigmon.me/css/custom.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body lang="en-us">
+<div class="container">
+
+
+<header class="row text-left title">
+  <h1 class="title">JSON From The Command Line</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+        PUBLISHED ON APR 30, 2020 
+      
+      
+      
+      —
+      
+      
+      <a class="meta" href="/categories/bash">BASH</a>, 
+      
+      <a class="meta" href="/categories/development">DEVELOPMENT</a>, 
+      
+      <a class="meta" href="/categories/json">JSON</a>
+      
+      
+      
+    </h6>
+  </div>
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+    <p>I want to share a command line tool I have recently learned. <code>jq</code> provides a fantastic and fast way to manipulate and manage JSON files, especially when they become very large. I want to give a quick overview of how it works and then show some examples.</p>
+<h2 id="giving-jq-input-and-output">Giving jq input and output</h2>
+<p><code>jq</code> works as a filter, which means that it requires input and will give you output. The handiest way to work with it is via redirects. In the simplest case if your input comes from a file there is no redirect necessary:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jq --some-jq-flag  myfile.json
+</code></pre></div><p>This will take <code>myfile.json</code> as input and print your output to <code>stdout</code>. Say you want to redirect that output to a new file?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jq --some-jq-flag myfile.json &gt; my_modified_file.json
+</code></pre></div><p>(You may be tempted to <code>cat</code> the file into <code>jq</code> but this is a frowned upon pattern, called useless use of cat or UUOC. See <a href="https://github.com/koalaman/shellcheck/wiki/SC2002">here</a> and <a href="https://en.wikipedia.org/wiki/Cat_(Unix)#Useless_use_of_cat">here</a>)</p>
+<p>What if your input comes from a <code>grep</code> or <code>curl</code> command or some other process?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://my-website | jq --some-jq-flag &gt; my_modified_file.json
+</code></pre></div><p>Finally, redirecting the <code>jq</code> output into another command (let’s see how many lines our output is) works as expected:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://my-website | jq --some-jq-flag | wc -l
+</code></pre></div><h2 id="but-what-does-it-do">But What Does It Do?</h2>
+<h3 id="pretty-print">Pretty Print</h3>
+<p>Perhaps one of it’s most common and easy to see uses is to “pretty print” JSON data. We can tell <code>jq</code> to use the identity filter (<code>.</code>) (i.e. do not alter the data) and it will default to pretty print. This is accomplished via the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">some_input | jq <span style="color:#e6db74">&#39;.&#39;</span> 
+</code></pre></div><p>A useful construct to quickly pretty print from a e.g. Python script is to just “print” the data from the script and redirect the output to a file, through <code>jq</code>, e.g.:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">my_script_that_prints_json.py &gt; tmp.json
+jq <span style="color:#e6db74">&#39;.&#39;</span> &lt; tmp.json
+</code></pre></div><h3 id="array-to-non-array-and-back">Array to Non-array and Back</h3>
+<p>Say someone has given you a JSON file that contains many objects, but they are not comma separated, and have no brackets to identify it as an array (this happens often.) You can read the file in “slurp” mode with the identity filter and <code>jq</code> will create an array out of your objects.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jq -s <span style="color:#e6db74">&#39;.&#39;</span>  bracketless_file.json &gt; array_of_objects.json
+</code></pre></div><p>Now imagine the opposite- you have your array of JSON objects but you want to “remove the array.” Switching back and forth between these forms can be useful depending on the tool with which you want to manipulate the data. You can accomplish this by filtering on the array itself:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jq <span style="color:#e6db74">&#39;.[]&#39;</span>  array.json &gt; non_array.json
+</code></pre></div><h3 id="converting-to-jsonl">Converting to JSONL</h3>
+<p>Say you need to convert your array of JSON objects into <a href="http://jsonlines.org/">JSONL format</a>, or “new line delimited JSON.” A common use case for this (for me) is converting JSON into an appropriate format to be loaded into BigQuery (Google’s basic SQL database in GCP.) The appropriate flag here is the <em>compact</em> flag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jq -c <span style="color:#e6db74">&#39;.&#39;</span> non_compact.json &gt; my_new_file.jsonl
+</code></pre></div><p>(don`t forget file extensions are <a href="https://askubuntu.com/questions/803434/do-file-extensions-have-any-purpose-for-the-operating-system">“meaningless”</a> in a UNIX-style system.)</p>
+<h3 id="accessing-keys-and-data">Accessing Keys and Data</h3>
+<p>Say you are still getting a file with an array of JSON objects and want to know how many objects are in your array? We can use the identity filter and the built in <code>jq</code> length function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Spaces are allowed if you think it is more readable:</span>
+<span style="color:#75715e"># jq &#39;. | length&#39; array.json</span>
+jq <span style="color:#e6db74">&#39;.|length&#39;</span> array.json
+</code></pre></div><p>Imagine you have the following data and want to know how many elements are in a specific list:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat data.json
+<span style="color:#f92672">{</span>
+  “object”: <span style="color:#f92672">[</span>
+    <span style="color:#f92672">{</span>...<span style="color:#f92672">}</span>,
+    ... 
+    <span style="color:#f92672">{</span>...<span style="color:#f92672">}</span>,
+  <span style="color:#f92672">]</span>,
+    “another object”:
+     ...
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e"># Get number of elements in “object”</span>
+jq <span style="color:#e6db74">&#39;.object|length&#39;</span> data.json
+</code></pre></div><p>Accessing the value in a specific key is simple as well. Taking the same example data as above:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jq <span style="color:#e6db74">&#39;.object&#39;</span> data.json
+</code></pre></div><p>This will print out the value associated with that key!</p>
+<h3 id="more-information">More information</h3>
+<p>I have barely scratched the surface of what you can do with this tool. Feel free to check out the excellent documentation on <a href="https://stedolan.github.io/jq/">the website</a>, and you can always run <code>jq --help</code> or <code>man jq</code>.</p>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://www.johnsigmon.me/technical/bash-tips/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/technical">technical</a></span>
+  
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://www.johnsigmon.me/">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  <hr />
+  
+</footer>
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
+
+
