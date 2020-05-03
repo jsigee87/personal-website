@@ -126,6 +126,8 @@ cut -c1-100 &lt; large_file
 
 <span style="color:#75715e"># The above command is equivalent to</span>
 cat large_file | cut -c1-100
+
+<span style="color:#75715e"># But avoids the useless cat</span>
 </code></pre></div><h2 id="custom-logging-statements">Custom logging statements</h2>
 <p>A practice I am in the habit of is placing a variable at the top of scripts called <code>MYFILENAME</code>. I have found it useful for logging and usage statements.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">MYFILENAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myscript.sh&#34;</span>
@@ -154,6 +156,7 @@ key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$
 <span style="color:#66d9ef">done</span>
 </code></pre></div><h2 id="figuring-out-where-your-file-is">Figuring Out Where Your File Is</h2>
 <p>You want someone to be able to run your script from multiple locations, but the script may need to move around within a repository to access different files. A simple and <em>relatively</em> robust way to manage this is by figuring out the directory your script is located in, and <code>cd</code>-ing to that directory. This snippet should take care of that.</p>
+<p>This works by getting the script name from <code>$0</code>. For a more in depth discussion of this, see this <a href="https://unix.stackexchange.com/questions/119929/will-0-always-include-the-path-to-the-script">SO post</a>. For a very in depth discussion of the portability of this command and other options, see this <a href="https://stackoverflow.com/questions/59895/how-to-get-the-source-directory-of-a-bash-script-from-within-the-script-itself">SP post</a>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd <span style="color:#66d9ef">$(</span>dirname <span style="color:#e6db74">&#34;</span>$0<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span>
 </code></pre></div><h2 id="using-shellcheck">Using Shellcheck</h2>
 <p>If you have never used it, <a href="https://github.com/koalaman/shellcheck">shellcheck</a> is a fantastic shell linter. Install and set up is easy, there is no reason not to use it. I found it to be accurate and helpful, and definitely not too picky.</p>
