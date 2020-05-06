@@ -4,7 +4,7 @@ date: 2020-04-26
 toc: false
 ---
 
-During the COVID-19 pandemic of 2020 I started compiling a list of (mostly) free climbing, mountaineering, and skiing videos. I created a Google Doc that is available here(https://docs.google.com/document/d/11LvKbnjFQjFaqVGwdGAbA3_OBhCFn8BfteTFQYECBtM/edit?usp=sharing). I will occasionally sync this document with the Google Doc. If you want to make suggestions, navigate to the document and add a comment. Enjoy!
+During the COVID-19 pandemic of 2020 I started compiling a list of (mostly) free climbing, mountaineering, and skiing videos. I created a Google Doc that is available [here](https://docs.google.com/document/d/11LvKbnjFQjFaqVGwdGAbA3_OBhCFn8BfteTFQYECBtM/edit?usp=sharing). I will occasionally sync this document with the Google Doc. If you want to make suggestions, navigate to the document and add a comment. Enjoy!
 
 ---
 
@@ -19,8 +19,8 @@ https://youtu.be/UrLIPfiBuKk
 Russ Clune BD  
 https://youtu.be/8U0H0FCRYDk  
 
-Jorg Verhoeven frees the nose 
-https://youtu.be/VapbvTq8GOE 
+Jorg Verhoeven frees the nose  
+https://youtu.be/VapbvTq8GOE  
 
 Of Choss and Lions TNF  
 https://youtu.be/mvOzAB8j5Eg  
@@ -40,7 +40,7 @@ https://youtu.be/nPtdvfqYrdY
 Hazel Findlay The Doors  
 https://vimeo.com/136621847  
 
-Alex Honnold and Emily Harrington on Solar Flare 
+Alex Honnold and Emily Harrington on Solar Flare  
 https://youtu.be/E6vWUHYhSnI  
 
 On the Verge - Powell River  
@@ -108,7 +108,8 @@ https://youtu.be/MTxPnQNWdIw
 ## Mountaineering  
   
 Meru  
-Full length: https://www.amazon.com/gp/video/detail/B013WF4E9M/ref=atv_dp_share_cu_r  
+Full length:  
+https://www.amazon.com/gp/video/detail/B013WF4E9M/ref=atv_dp_share_cu_r  
   
 Cerro Torre with David Lama  
 https://www.redbull.com/int-en/films/cerro-torre  
@@ -120,8 +121,10 @@ Ueli Steck Everest Altercation
 https://www.redbull.com/int-en/episodes/high-tension-reel-rock-s01-e11  
   
 Fitz Roy Traverse  
-Part 1: https://www.redbull.com/int-en/episodes/a-line-across-the-sky-part-i-reel-rock-s02-e01  
-Part 2: https://www.redbull.com/int-en/episodes/a-line-across-the-sky-part-ii-reel-rock-s02-e02  
+Part 1:  
+https://www.redbull.com/int-en/episodes/a-line-across-the-sky-part-i-reel-rock-s02-e01  
+Part 2:  
+https://www.redbull.com/int-en/episodes/a-line-across-the-sky-part-ii-reel-rock-s02-e02  
        
 Jeff Lowe Reel Rock  
 https://www.redbull.com/us-en/episodes/lowe-point-reel-rock-s02-e06  
