@@ -10,20 +10,14 @@ During the COVID-19 pandemic of 2020 I started compiling a list of (mostly) free
 
 ## Climbing
 
-Brad Gobright in Indian Creek  
-
-[https://youtu.be/Eu3oHu42J4s]
-
+Brad Gobright in Indian Creek   
+https://youtu.be/Eu3oHu42J4s  
 
 Brad Gobright and Ben Hanna Red Rock  
+https://youtu.be/UrLIPfiBuKk  
 
-[https://youtu.be/UrLIPfiBuKk]
-
-
-Russ Clune BD
-
-[https://youtu.be/8U0H0FCRYDk]
-
+Russ Clune BD  
+https://youtu.be/8U0H0FCRYDk  
 
 Jorg Verhoeven frees the nose
 [https://youtu.be/VapbvTq8GOE]
