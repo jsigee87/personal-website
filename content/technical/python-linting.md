@@ -25,22 +25,66 @@ You can install pylint with pip like so:
 pip install pylint
 ```
 
+When you want to run pylint you can point it to either a directory or a single file:
 
-when you run it you  should either point to a directory:
+```bash
+pylint my_directory/
+# or
+pylint my_module.py
+```
 
- or a single file:
+Pylint will then spit out a report with all of your errors. It may look something like this:
 
- I would recommend creating an RC file for each projects as your requirements May differ with different projects. If this is the case you need to point pilot to your RC file like this:
+```
+$ pylint unit_tests.py
+************* Module unit_tests
+unit_tests.py:115:2: W0511: TODO read in 2D outputs from mfcc and pass them in. (fixme)
+unit_tests.py:13:19: C0326: Exactly one space required after comma
+INPUT_SIZE = (1, 98,32)
+                   ^ (bad-whitespace)
+unit_tests.py:44:0: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:48:0: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:77:0: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:88:50: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:93:0: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:117:11: C0326: Exactly one space required around comparison
+if __name__=="__main__":
+           ^^ (bad-whitespace)
+unit_tests.py:119:0: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+unit_tests.py:9:0: E0401: Unable to import 'coremltools' (import-error)
+unit_tests.py:10:0: E0401: Unable to import 'tensorflow' (import-error)
+unit_tests.py:11:0: E0401: Unable to import 'tensorflow.core.framework' (import-error)
+unit_tests.py:26:0: C0116: Missing function or method docstring (missing-function-docstring)
+unit_tests.py:29:0: C0115: Missing class docstring (missing-class-docstring)
+unit_tests.py:38:4: C0116: Missing function or method docstring (missing-function-docstring)
+unit_tests.py:39:43: C0103: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+unit_tests.py:45:4: C0116: Missing function or method docstring (missing-function-docstring)
+unit_tests.py:56:0: C0115: Missing class docstring (missing-class-docstring)
+unit_tests.py:85:4: C0116: Missing function or method docstring (missing-function-docstring)
+unit_tests.py:96:8: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+unit_tests.py:4:0: W0611: Unused import os (unused-import)
+unit_tests.py:11:0: W0611: Unused graph_pb2 imported from tensorflow.core.framework (unused-import)
+
+-----------------------------------
+Your code has been rated at 5.83/10
+```
+
+This report will tell you which line is giving the error, and what the error is. The error codes identify the specific error associated with that line. For example, the error code `C0303` tells us that we have trailing whitespace. If you wish to disable an error for a specific line, but not project wide, you may do so by inserting a comment into the code to tell pylint to skip that error:
+
+```python
+# pylint: disable=C0303
+foo = bar() # A line with the C0303 error
+```
+
+Disabling an error project wide is done by amending the `.pylintrc` file. For the same error as above, you would put the following inside your `.pylintrc`:
 
 ```
 ```
 
- in some cases you may not want to ignore the pylons suggestion project wide. In these cases you can simply put a disabled command above the offending line like this:
-
+I would recommend putting the `.pylintrc` at the top of the project. However, this may require that you point to it from wherever you are running pylint.
 ```
 ```
-
-
 
 Black
 
