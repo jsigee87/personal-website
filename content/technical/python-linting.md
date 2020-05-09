@@ -99,7 +99,7 @@ This creates a file with all the options present. For the same error as above, y
 disable=C0303
 ```
 
-That`s it! You can do more complicated regex to allow and disallow specific things as needed. If you want some more info on using the `.pylintrc` the documentation is [here](http://pylint.pycqa.org/en/latest/user_guide/options.html).
+That's it! You can do more complicated regex to allow and disallow specific things as needed. If you want some more info on using the `.pylintrc` the documentation is [here](http://pylint.pycqa.org/en/latest/user_guide/options.html).
 
 Now that you have your `.pylintrc` working, you need to point to it when you run pylint:
 
@@ -111,7 +111,7 @@ Pylint is extremely popular and flexible, but there are certainly other options 
 
 ## Black
 
-[Black](https://github.com/psf/black) is another linter that is so different from the other linters that it deserves a mention. Black is less linter and more _code formatter_. This means that unlike pylint, it is not configurable and therefore highly opinionated. If you are okay with the opinions built into Black then it is a great alternative and is much simpler to use. 
+[Black](https://github.com/psf/black) is arguably not even a linter, but it is interesting enough that it deserves a mention. Black is less linter and more _code formatter_. This means that unlike pylint, it is not configurable and therefore highly opinionated. If you are okay with the opinions built into Black then it is a great alternative and is much simpler to use. 
 
 To install Black you can run:
 
@@ -128,6 +128,8 @@ black module.py
 # or
 black directory/
 ```
+
+When you run Black on a file it formats it for you to its preferred format, no questions asked. This means your source code file will be changed, and you will get no error report!
 
 I would love to hear opinions on Black if anyone is using it! Feel free to email me (johnsigmon@gmail.com).
 
