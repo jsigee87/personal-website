@@ -164,7 +164,7 @@ In deploy.sh line 33:
  --env-vars-file $ENVFILENAME
                  ^-- SC2086: Double quote to prevent globbing and word splitting.
 
-</code></pre><p>Each error has its own <strong>fantastic</strong> page in the shellcheck documentation (it usually pulls up by putting the error code in Google.) For instance, <code>SC2086</code> has a full explanation <a href="https://github.com/koalaman/shellcheck/wiki/SC2086a">here</a>.</p>
+</code></pre><p>Each error has its own <strong>fantastic</strong> page in the shellcheck documentation (it usually pulls up by putting the error code in Google.) For instance, <code>SC2086</code> has a full explanation <a href="https://github.com/koalaman/shellcheck/wiki/SC2086">here</a>.</p>
 <p>If you wish to disable errors, you can do so in the same manner as pylint:</p>
 <pre><code># shellcheck disable=SC2016
 offending line = $unquotedvar

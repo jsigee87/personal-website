@@ -168,7 +168,7 @@ In deploy.sh line 33:
 
 ```
 
-Each error has its own **fantastic** page in the shellcheck documentation (it usually pulls up by putting the error code in Google.) For instance, `SC2086` has a full explanation [here](https://github.com/koalaman/shellcheck/wiki/SC2086a).
+Each error has its own **fantastic** page in the shellcheck documentation (it usually pulls up by putting the error code in Google.) For instance, `SC2086` has a full explanation [here](https://github.com/koalaman/shellcheck/wiki/SC2086).
 
 If you wish to disable errors, you can do so in the same manner as pylint:
 
