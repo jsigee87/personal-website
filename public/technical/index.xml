@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Linting Your Python Project</title>
+      <title>Linting Your Python and Shell Scripts</title>
       <link>https://www.johnsigmon.me/technical/python-linting/</link>
       <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.johnsigmon.me/technical/python-linting/</guid>
-      <description>Linting vs Testing First I want to cover the difference between linting and testing so there is no confusion. Linting is a &amp;ldquo;static&amp;rdquo; test in the sense that it doesn&amp;rsquo;t run or execute any code. It analyzes the file(s) looking for code smells and what the linter considers poor style.
-On the other hand, test actually execute the code and are looking to assert that functions have the correct output given some predefined input.</description>
+      <description>Linting vs Testing Linting is a &amp;ldquo;static&amp;rdquo; test in the sense that it doesn&amp;rsquo;t run or execute any code. It analyzes the file(s) looking for code smells and what the linter considers poor style.
+On the other hand, tests actually execute some code and are looking to assert that functions have the correct output given some predefined input. In particular, unit tests typically test small functions and should be atomic and not dependent on each other.</description>
     </item>
     
     <item>

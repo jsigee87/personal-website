@@ -1,14 +1,19 @@
 ---
-title: "Linting Your Python Project"
+title: "Linting Your Python and Shell Scripts"
 date: 2020-05-07
 toc: false
+categories:
+- development
+- python
+- bash
+- linting
 ---
 
 ## Linting vs Testing
 
-First I want to cover the difference between linting and testing so there is no confusion. Linting is a "static" test in the sense that it doesn't run or execute any code. It analyzes the file(s) looking for [code smells](https://martinfowler.com/bliki/CodeSmell.html) and what the linter considers poor style. 
+Linting is a "static" test in the sense that it doesn't run or execute any code. It analyzes the file(s) looking for [code smells](https://martinfowler.com/bliki/CodeSmell.html) and what the linter considers poor style. 
 
-On the other hand, test actually execute the code and are looking to assert that functions have the correct output given some predefined input. Unit tests typically test small functions and should be atomic and not dependent on each other. Unit tests are typically used when you want to provide a way to make sure you have not broken any logic in the system when you make changes or additions. Other common tests are acceptance tests, integration tests, and UI tests, and they are all out of the scope of this post.
+On the other hand, tests actually execute some code and are looking to assert that functions have the correct output given some predefined input. In particular, unit tests typically test small functions and should be atomic and not dependent on each other. Unit tests are typically used when you want to provide a way to make sure you have not broken any logic in the system when you make changes or additions. Other common tests are acceptance tests, integration tests, and UI tests, and they are all out of the scope of this post.
 
 It is quite common for a linter or code formatter to be installed in a project with many developers so that code remains homogenous. A project becomes much easier to maintain when there is only one style of code within it. Linters are typically either part of the test or build process, and developers can run them on their local workstation before committing their code to a build branch.  
 
@@ -16,13 +21,13 @@ It is quite common for a linter or code formatter to be installed in a project w
 
 ### Overview  
 
-There are quite a few Python linters available. One of the more popular ones is pylint. Pylint can be a great way to start out but its main downfall is that it's extremely configurable. If you don't take the time to configure it it will spit out endless streams of error messages at you that you do not care about in the slightest. We are going to solve this by creating a `.pylintrc` for the project. I would recommend creating one for each project in case you want to configure things differently for different proects. This file will tell pylint which errors that you wish to ignore.   
+There are quite a few Python linters available. One of the more popular ones is pylint. Pylint can be a great way to start out but its greatest advantage is also its greatest downfall: its extreme configurability. If you don't take the time to configure it it will spit endless streams of error messages at you that you do not care about. We are going to solve this by creating a `.pylintrc` for the project. I would recommend creating one for each project in case you want to configure things differently for different proects. This file will tell pylint which errors that you wish to ignore.   
 
 ### Installation  
 
 You can install pylint with pip like so:  
 
-```bash
+```
 pip install pylint
 ```
 
@@ -84,7 +89,7 @@ foo = bar() # A line with the C0303 error
 
 Disabling an error project wide is done by amending the `.pylintrc` file. First you need to create a `.pylintrc` file for your project:
 
-```bash
+```
 pylint --generate-rcfile > <project home>/.pylintrc
 ```
 
@@ -165,7 +170,7 @@ Each error has its own **fantastic** page in the shellcheck documentation (it us
 
 If you wish to disable errors, you can do so in the same manner as pylint:
 
-```bash
+```
 # shellcheck disable=SC2016
 offending line = $unquotedvar
 ```
@@ -174,5 +179,6 @@ offending line = $unquotedvar
 
 Pylint will automatically find "TODO" statements and warn you about them. However ShellCheck will not, and pylint may miss some types of "TODO"s. I found it useful enough to check for this that I created a script to do so:
 
+{{< gist jsigee87 e78a80d7c1595efb9854d003abdb3ab7 >}}
 
 The script finds all files ending in `.py` and `.sh` in the directory you point to, while ignoring any `.env` directories. It then looks for any "TODO" or "FIXME" in a case insensitive manner. The `grep` output is then annotated with the word "Warning" (in case you want to add this as a compile time script in another project with compiled code) and printed to the terminal.
