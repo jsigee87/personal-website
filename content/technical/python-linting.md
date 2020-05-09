@@ -1,13 +1,14 @@
 ---
 title: "Linting Your Python Project"
-date: 2020-05-07T19:37:35-05:00
-draft: true
+date: 2020-05-07
 toc: false
 ---
 
 ## Linting vs Testing
 
-First I want to cover the difference between linting and testing so there is no confusion. Linting is a "static" test in the sense that it doesn't run or execute any code. It analyzes the file(s) looking for [code smells](https://martinfowler.com/bliki/CodeSmell.html) and what the linter considers poor style. On the other hand, test actually execute the code and are looking to assert that functions have the correct output given some predefined input. Unit tests typically test small functions and should be atomic and not dependent on each other. Unit tests are typically used when you want to provide a way to make sure you have not broken any logic in the system when you make changes or additions. Other common tests are acceptance tests, integration tests, and UI tests, and they are all out of the scope of this post.
+First I want to cover the difference between linting and testing so there is no confusion. Linting is a "static" test in the sense that it doesn't run or execute any code. It analyzes the file(s) looking for [code smells](https://martinfowler.com/bliki/CodeSmell.html) and what the linter considers poor style. 
+
+On the other hand, test actually execute the code and are looking to assert that functions have the correct output given some predefined input. Unit tests typically test small functions and should be atomic and not dependent on each other. Unit tests are typically used when you want to provide a way to make sure you have not broken any logic in the system when you make changes or additions. Other common tests are acceptance tests, integration tests, and UI tests, and they are all out of the scope of this post.
 
 It is quite common for a linter or code formatter to be installed in a project with many developers so that code remains homogenous. A project becomes much easier to maintain when there is only one style of code within it. Linters are typically either part of the test or build process, and developers can run them on their local workstation before committing their code to a build branch.  
 
@@ -25,9 +26,11 @@ You can install pylint with pip like so:
 pip install pylint
 ```
 
+### Usage
+
 When you want to run pylint you can point it to either a directory or a single file:
 
-```bash
+```
 pylint my_directory/
 # or
 pylint my_module.py
@@ -70,33 +73,106 @@ unit_tests.py:11:0: W0611: Unused graph_pb2 imported from tensorflow.core.framew
 Your code has been rated at 5.83/10
 ```
 
-This report will tell you which line is giving the error, and what the error is. The error codes identify the specific error associated with that line. For example, the error code `C0303` tells us that we have trailing whitespace. If you wish to disable an error for a specific line, but not project wide, you may do so by inserting a comment into the code to tell pylint to skip that error:
+This report will tell you which line is giving the error, and what the error is. The error codes identify the specific error associated with that line. For example, the error code `C0303` tells the user that there is trailing whitespace. If you wish to disable an error for a specific line, but not project wide, you may do so by inserting a comment into the code to tell pylint to skip that error:
 
 ```python
 # pylint: disable=C0303
 foo = bar() # A line with the C0303 error
 ```
 
-Disabling an error project wide is done by amending the `.pylintrc` file. For the same error as above, you would put the following inside your `.pylintrc`:
+### `.pylintrc`
 
-```
-```
+Disabling an error project wide is done by amending the `.pylintrc` file. First you need to create a `.pylintrc` file for your project:
 
-I would recommend putting the `.pylintrc` at the top of the project. However, this may require that you point to it from wherever you are running pylint.
-```
-```
-
-Black
-
-another linter to look into is called [Black](https://github.com/psf/black). Unlike pylint it is not very configurable and therefore highly opinionated. If you are okay with the opinions built into black then it may make a great alternative. Keep in mind that black is less of a linter and more of a code formatter. It does not warn you of code smells it simply changes your code to its preferred format.
-
-Shellcheck
-
- I want to take this opportunity to also plug my favorite linter which is she'll check. She'll check is used for renting shell scripting files. It is extremely valuable and I learned quite a bit about Lenox style shell scripting from using it my files. the errors are not excessive they are helpful they provide explanations it is extremely well documented and extremely easy to use.  you can download it here  or by running:
-
-```
+```bash
+pylint --generate-rcfile > <project home>/.pylintrc
 ```
 
- you can use it like this
+This creates a file with all the options present. For the same error as above, you would navigate to the correct section of the file, which is `[MESSAGES CONTROL]` in this case. Put the following line there:
+
+```
+disable=C0303
+```
+
+That`s it! You can do more complicated regex to allow and disallow specific things as needed. If you want some more info on using the `.pylintrc` the documentation is [here](http://pylint.pycqa.org/en/latest/user_guide/options.html).
+
+Now that you have your `.pylintrc` working, you need to point to it when you run pylint:
+
+```
+pylint --rcfile=/path/to/rcfile module.py
+```
+
+Pylint is extremely popular and flexible, but there are certainly other options out there: [pyflakes](https://github.com/PyCQA/pyflakes), [Flake8](https://flake8.pycqa.org/en/latest/), and [Pylama](https://pylama.readthedocs.io/en/latest/) are a few other popular ones.
+
+## Black
+
+[Black](https://github.com/psf/black) is another linter that is so different from the other linters that it deserves a mention. Black is less linter and more _code formatter_. This means that unlike pylint, it is not configurable and therefore highly opinionated. If you are okay with the opinions built into Black then it is a great alternative and is much simpler to use. 
+
+To install Black you can run:
+
+```
+pip install black
+```
+
+It is worth noting that Python 3.6.0+ is required to run Black.
+
+Usage is straightforward:
+
+```
+black module.py
+# or
+black directory/
+```
+
+I would love to hear opinions on Black if anyone is using it! Feel free to email me (johnsigmon@gmail.com).
+
+## ShellCheck
+
+I can't write anything about linting and not take the opportunity to plug my favorite linter which is [ShellCheck](https://github.com/koalaman/shellcheck). ShellCheck is used for linting shell scripts. I have found it extremely valuable and I learned quite a bit about Unix-style shell scripting from using it. The errors are not excessive, they are helpful and provide explanations. It is extremely well documented and extremely easy to use. It can be helpful for shell script authors of all skill levels. 
+
+You can install it with your standard Unix package manager:
+
+```
+# For Ubuntu
+apt-get install shellcheck
+
+# For Mac
+brew install shellcheck
+```
+
+Usage is straightforward as well:
+
+```
+shellcheck script.sh
+```
+
+It gives an error report similiar to pylint:
+
+```
+$ shellcheck deploy.sh
+In deploy.sh line 29:
+ --trigger-resource $TIRGGERSOURCE \
+                    ^-- SC2086: Double quote to prevent globbing and word splitting.
 
 
+In deploy.sh line 33:
+ --env-vars-file $ENVFILENAME
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+```
+
+Each error has its own **fantastic** page in the shellcheck documentation (it usually pulls up by putting the error code in Google.) For instance, `SC2086` has a full explanation [here](https://github.com/koalaman/shellcheck/wiki/SC2086a).
+
+If you wish to disable errors, you can do so in the same manner as pylint:
+
+```bash
+# shellcheck disable=SC2016
+offending line = $unquotedvar
+```
+
+## Searching for TODOs
+
+Pylint will automatically find "TODO" statements and warn you about them. However ShellCheck will not, and pylint may miss some types of "TODO"s. I found it useful enough to check for this that I created a script to do so:
+
+
+The script finds all files ending in `.py` and `.sh` in the directory you point to, while ignoring any `.env` directories. It then looks for any "TODO" or "FIXME" in a case insensitive manner. The `grep` output is then annotated with the word "Warning" (in case you want to add this as a compile time script in another project with compiled code) and printed to the terminal.
