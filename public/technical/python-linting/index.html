@@ -128,12 +128,12 @@ foo <span style="color:#f92672">=</span> bar() <span style="color:#75715e"># A l
 <pre><code>pylint --generate-rcfile &gt; &lt;project home&gt;/.pylintrc
 </code></pre><p>This creates a file with all the options present. For the same error as above, you would navigate to the correct section of the file, which is <code>[MESSAGES CONTROL]</code> in this case. Put the following line there:</p>
 <pre><code>disable=C0303
-</code></pre><p>That<code>s it! You can do more complicated regex to allow and disallow specific things as needed. If you want some more info on using the </code>.pylintrc` the documentation is <a href="http://pylint.pycqa.org/en/latest/user_guide/options.html">here</a>.</p>
+</code></pre><p>That&rsquo;s it! You can do more complicated regex to allow and disallow specific things as needed. If you want some more info on using the <code>.pylintrc</code> the documentation is <a href="http://pylint.pycqa.org/en/latest/user_guide/options.html">here</a>.</p>
 <p>Now that you have your <code>.pylintrc</code> working, you need to point to it when you run pylint:</p>
 <pre><code>pylint --rcfile=/path/to/rcfile module.py
 </code></pre><p>Pylint is extremely popular and flexible, but there are certainly other options out there: <a href="https://github.com/PyCQA/pyflakes">pyflakes</a>, <a href="https://flake8.pycqa.org/en/latest/">Flake8</a>, and <a href="https://pylama.readthedocs.io/en/latest/">Pylama</a> are a few other popular ones.</p>
 <h2 id="black">Black</h2>
-<p><a href="https://github.com/psf/black">Black</a> is another linter that is so different from the other linters that it deserves a mention. Black is less linter and more <em>code formatter</em>. This means that unlike pylint, it is not configurable and therefore highly opinionated. If you are okay with the opinions built into Black then it is a great alternative and is much simpler to use.</p>
+<p><a href="https://github.com/psf/black">Black</a> is arguably not even a linter, but it is interesting enough that it deserves a mention. Black is less linter and more <em>code formatter</em>. This means that unlike pylint, it is not configurable and therefore highly opinionated. If you are okay with the opinions built into Black then it is a great alternative and is much simpler to use.</p>
 <p>To install Black you can run:</p>
 <pre><code>pip install black
 </code></pre><p>It is worth noting that Python 3.6.0+ is required to run Black.</p>
@@ -141,7 +141,8 @@ foo <span style="color:#f92672">=</span> bar() <span style="color:#75715e"># A l
 <pre><code>black module.py
 # or
 black directory/
-</code></pre><p>I would love to hear opinions on Black if anyone is using it! Feel free to email me (<a href="mailto:johnsigmon@gmail.com">johnsigmon@gmail.com</a>).</p>
+</code></pre><p>When you run Black on a file it formats it for you to its preferred format, no questions asked. This means your source code file will be changed, and you will get no error report!</p>
+<p>I would love to hear opinions on Black if anyone is using it! Feel free to email me (<a href="mailto:johnsigmon@gmail.com">johnsigmon@gmail.com</a>).</p>
 <h2 id="shellcheck">ShellCheck</h2>
 <p>I can&rsquo;t write anything about linting and not take the opportunity to plug my favorite linter which is <a href="https://github.com/koalaman/shellcheck">ShellCheck</a>. ShellCheck is used for linting shell scripts. I have found it extremely valuable and I learned quite a bit about Unix-style shell scripting from using it. The errors are not excessive, they are helpful and provide explanations. It is extremely well documented and extremely easy to use. It can be helpful for shell script authors of all skill levels.</p>
 <p>You can install it with your standard Unix package manager:</p>
