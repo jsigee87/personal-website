@@ -4,6 +4,7 @@ date: 2020-04-26
 categories:
 - development
 - bash
+toc: false
 ---
 
 ## Redirects
@@ -100,6 +101,8 @@ cut -c1-100 < large_file
 
 # The above command is equivalent to
 cat large_file | cut -c1-100
+
+# But avoids the useless cat
 ```
 
 ## Custom logging statements
@@ -143,6 +146,8 @@ done
 ## Figuring Out Where Your File Is
 
 You want someone to be able to run your script from multiple locations, but the script may need to move around within a repository to access different files. A simple and _relatively_ robust way to manage this is by figuring out the directory your script is located in, and `cd`-ing to that directory. This snippet should take care of that.
+
+This works by getting the script name from `$0`. For a more in depth discussion of this, see this [SO post](https://unix.stackexchange.com/questions/119929/will-0-always-include-the-path-to-the-script). For a very in depth discussion of the portability of this command and other options, see this [SP post](https://stackoverflow.com/questions/59895/how-to-get-the-source-directory-of-a-bash-script-from-within-the-script-itself).
 
 ```bash
 cd $(dirname "$0")

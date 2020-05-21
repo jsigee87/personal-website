@@ -4,6 +4,7 @@ date: 2020-04-26
 categories:
 - development
 - git
+toc: false
 ---
 
 ## Basic Git Usage

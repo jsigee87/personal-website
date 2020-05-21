@@ -3,10 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-<<<<<<< Updated upstream
-    <loc>http://johnsigmon.me/about/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
-=======
     <loc>https://www.johnsigmon.me/writing/my-battle-with-chronic-pain/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
   </url>
@@ -44,90 +40,80 @@
   <url>
     <loc>https://www.johnsigmon.me/categories/python/</loc>
     <lastmod>2020-05-07T00:00:00+00:00</lastmod>
->>>>>>> Stashed changes
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/categories/bash/</loc>
+    <loc>https://www.johnsigmon.me/technical/</loc>
+    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.johnsigmon.me/categories/json/</loc>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.johnsigmon.me/technical/jq/</loc>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.johnsigmon.me/about/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/technical-writing/bash-tips/</loc>
+    <loc>https://www.johnsigmon.me/technical/bash-tips/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/categories/</loc>
+    <loc>https://www.johnsigmon.me/writing/choosing-our-own-fate/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/writing/choosing-our-own-fate/</loc>
+    <loc>https://www.johnsigmon.me/writing/climbing-and-mountaineering-videos/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/writing/climbing-and-mountaineering-videos/</loc>
+    <loc>https://www.johnsigmon.me/writing/favorite-dune-quotes/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/categories/development/</loc>
+    <loc>https://www.johnsigmon.me/writing/following-my-inspiration/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/writing/favorite-dune-quotes/</loc>
+    <loc>https://www.johnsigmon.me/categories/git/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/writing/following-my-inspiration/</loc>
+    <loc>https://www.johnsigmon.me/technical/git-tips/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/categories/git/</loc>
+    <loc>https://www.johnsigmon.me/writing/grading-on-a-curve/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/technical-writing/git-tips/</loc>
+    <loc>https://www.johnsigmon.me/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/writing/grading-on-a-curve/</loc>
+    <loc>https://www.johnsigmon.me/writing/time-and-money/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://johnsigmon.me/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://johnsigmon.me/technical-writing/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://johnsigmon.me/writing/time-and-money/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-<<<<<<< Updated upstream
-    <loc>http://johnsigmon.me/writing/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://johnsigmon.me/tags/</loc>
-=======
     <loc>https://www.johnsigmon.me/tags/</loc>
->>>>>>> Stashed changes
   </url>
   
 </urlset>

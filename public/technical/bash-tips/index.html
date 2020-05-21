@@ -10,7 +10,7 @@
 
 
 
-<base href="http://johnsigmon.me/">
+<base href="https://www.johnsigmon.me/">
 
 <title>
   John Sigmon - Bash Tips 
@@ -23,8 +23,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<link rel="stylesheet" href="http://johnsigmon.me/css/main.css">
-<link rel="stylesheet" href="http://johnsigmon.me/css/custom.css">
+<link rel="stylesheet" href="https://www.johnsigmon.me/css/main.css">
+<link rel="stylesheet" href="https://www.johnsigmon.me/css/custom.css">
 
 
 
@@ -68,23 +68,13 @@
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
     
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    
-    <h4 id="redirects">Redirects</h4>
+    <h2 id="redirects">Redirects</h2>
 <p>All those fun redirect operators are outlined really well in this <a href="https://unix.stackexchange.com/questions/159513/what-are-the-shells-control-and-redirection-operators">Stack Overflow post</a>.</p>
-<h4 id="grep-awk-and-sed">Grep, Awk, and Sed</h4>
+<h2 id="grep-awk-and-sed">Grep, Awk, and Sed</h2>
 <p>Grep is one of the most flexible and useful Linux utilities, Awk is actually a full blown programming language, and Sed isn&rsquo;t too bad either. This <a href="https://www-users.york.ac.uk/~mijp1/teaching/2nd_year_Comp_Lab/guides/grep_awk_sed.pdf">9 page overview</a> gives some good tips to get started without being overly long and verbose.</p>
-<h4 id="comparison-operators">Comparison Operators</h4>
+<h2 id="comparison-operators">Comparison Operators</h2>
 <p>The cases of comparing strings versus comparing variables are handled a little differently in bash. <a href="https://www.tldp.org/LDP/abs/html/comparison-ops.html">This</a> is an excellent guide. Note the whitespace! Bash is particular about whitespace.</p>
-<h4 id="checking-if-a-variable-is-empty">Checking if a Variable is Empty</h4>
+<h2 id="checking-if-a-variable-is-empty">Checking if a Variable is Empty</h2>
 <p>Example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$var<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>
 <span style="color:#66d9ef">then</span>
@@ -92,7 +82,7 @@
 <span style="color:#66d9ef">else</span>
     <span style="color:#75715e"># var is not empty</span>
 <span style="color:#66d9ef">fi</span>
-</code></pre></div><h4 id="checking-exit-codes">Checking Exit Codes</h4>
+</code></pre></div><h2 id="checking-exit-codes">Checking Exit Codes</h2>
 <p>The proper way to check out an exit code is C-style, and can be a little confusing. Example stolen from <a href="https://stackoverflow.com/questions/26675681/how-to-check-the-exit-status-using-an-if-statement-using-bash">this</a> Stack Overflow post.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">if</span> some_command
 <span style="color:#66d9ef">then</span>
@@ -107,7 +97,7 @@
 <span style="color:#66d9ef">else</span>
     <span style="color:#75715e"># command returned true</span>
 <span style="color:#66d9ef">fi</span>
-</code></pre></div><h4 id="checking-apt-versions">Checking Apt Versions</h4>
+</code></pre></div><h2 id="checking-apt-versions">Checking Apt Versions</h2>
 <p>Ex.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ apt-cache policy libgtest-dev
 libgtest-dev:
@@ -119,7 +109,7 @@ libgtest-dev:
         <span style="color:#ae81ff">100</span> /var/lib/dpkg/status
 </code></pre></div><p>Here the version is <code>1.7.0-4ubuntu1</code> and this version can be installed by running:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get install libgtest-dev<span style="color:#f92672">=</span>1.7.0-4ubuntu1
-</code></pre></div><h4 id="checking-the-beginning-of-a-large-file">Checking the Beginning of a Large File</h4>
+</code></pre></div><h2 id="checking-the-beginning-of-a-large-file">Checking the Beginning of a Large File</h2>
 <p>In a simple case, head is useful:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># This gives the first ten lines</span>
 head large_file 
@@ -136,14 +126,16 @@ cut -c1-100 &lt; large_file
 
 <span style="color:#75715e"># The above command is equivalent to</span>
 cat large_file | cut -c1-100
-</code></pre></div><h4 id="custom-logging-statements">Custom logging statements</h4>
+
+<span style="color:#75715e"># But avoids the useless cat</span>
+</code></pre></div><h2 id="custom-logging-statements">Custom logging statements</h2>
 <p>A practice I am in the habit of is placing a variable at the top of scripts called <code>MYFILENAME</code>. I have found it useful for logging and usage statements.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">MYFILENAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myscript.sh&#34;</span>
 
 <span style="color:#75715e"># LINENO is built in</span> 
 echo <span style="color:#e6db74">&#34;[INFO: </span>$MYFILENAME<span style="color:#e6db74">: </span>$LINENO<span style="color:#e6db74">] Starting myscript.sh&#34;</span>
 </code></pre></div><p>This becomes helpful when you have large and complicated bash scripts that need to work together.</p>
-<h4 id="casing-arguments">Casing Arguments</h4>
+<h2 id="casing-arguments">Casing Arguments</h2>
 <p>This has worked well for me to case out command line args. You may need other checks to ensure the correct variables were passed in. If you pass in an extra arg thats not supported this does not catch it. This example is something I commonly have to parse out for deployment scripts. If the flag <code>--dev</code> is found, I set a <code>DEV</code> flag to true, etc.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># While there are still arguments to parse</span>
 <span style="color:#66d9ef">while</span> <span style="color:#f92672">[[</span> $# -gt <span style="color:#ae81ff">0</span> <span style="color:#f92672">]]</span>
@@ -162,12 +154,13 @@ key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$
     ;;
 <span style="color:#66d9ef">esac</span>
 <span style="color:#66d9ef">done</span>
-</code></pre></div><h4 id="figuring-out-where-your-file-is">Figuring Out Where Your File Is</h4>
+</code></pre></div><h2 id="figuring-out-where-your-file-is">Figuring Out Where Your File Is</h2>
 <p>You want someone to be able to run your script from multiple locations, but the script may need to move around within a repository to access different files. A simple and <em>relatively</em> robust way to manage this is by figuring out the directory your script is located in, and <code>cd</code>-ing to that directory. This snippet should take care of that.</p>
+<p>This works by getting the script name from <code>$0</code>. For a more in depth discussion of this, see this <a href="https://unix.stackexchange.com/questions/119929/will-0-always-include-the-path-to-the-script">SO post</a>. For a very in depth discussion of the portability of this command and other options, see this <a href="https://stackoverflow.com/questions/59895/how-to-get-the-source-directory-of-a-bash-script-from-within-the-script-itself">SP post</a>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd <span style="color:#66d9ef">$(</span>dirname <span style="color:#e6db74">&#34;</span>$0<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span>
-</code></pre></div><h4 id="using-shellcheck">Using Shellcheck</h4>
+</code></pre></div><h2 id="using-shellcheck">Using Shellcheck</h2>
 <p>If you have never used it, <a href="https://github.com/koalaman/shellcheck">shellcheck</a> is a fantastic shell linter. Install and set up is easy, there is no reason not to use it. I found it to be accurate and helpful, and definitely not too picky.</p>
-<h4 id="iterating-over-an-array">Iterating Over an Array</h4>
+<h2 id="iterating-over-an-array">Iterating Over an Array</h2>
 <p>I always forget the syntax for this, so here is an example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SAMPLE_LIST<span style="color:#f92672">=(</span>
     <span style="color:#e6db74">&#34;list item 1&#34;</span>
@@ -180,7 +173,10 @@ key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$
     <span style="color:#75715e"># Access the item like this</span>
     echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>item<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">done</span>
-</code></pre></div>
+</code></pre></div><h2 id="bash-array-reference">Bash array reference</h2>
+<p>This is a great reference for bash arrays:</p>
+<p><a href="https://tldp.org/LDP/abs/html/arrays.html">https://tldp.org/LDP/abs/html/arrays.html</a></p>
+
   </div>
 </section>
 <section id="tag-pane" class="row meta">
@@ -203,14 +199,16 @@ key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$
 <section id="menu-pane" class="row menu text-center">
   
   
-  <span><a class="menu-item" href="http://johnsigmon.me/technical-writing/git-tips/">&lt; prev | </a></span>
+  <span><a class="menu-item" href="https://www.johnsigmon.me/technical/git-tips/">&lt; prev | </a></span>
   
   
-  <span><a class="menu-item" href="/technical-writing">technical-writing</a></span>
+  <span><a class="menu-item" href="/technical">technical</a></span>
   
   
+  <span><a class="menu-item" href="https://www.johnsigmon.me/technical/jq/"> | next &gt;</a></span>
   
-  <h4 class="text-center"><a class="menu-item" href="http://johnsigmon.me/">home</a></h4>
+  
+  <h4 class="text-center"><a class="menu-item" href="https://www.johnsigmon.me/">home</a></h4>
 </section>
 
 

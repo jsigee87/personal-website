@@ -2,18 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>John Sigmon</title>
-    <link>http://johnsigmon.me/</link>
+    <link>https://www.johnsigmon.me/</link>
     <description>Recent content on John Sigmon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://johnsigmon.me/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.johnsigmon.me/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-<<<<<<< Updated upstream
-=======
       <title>My Battle With Chronic Pain</title>
       <link>https://www.johnsigmon.me/writing/my-battle-with-chronic-pain/</link>
       <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
@@ -43,22 +41,21 @@ Giving jq input and output jq works as a filter, which means that it requires in
     </item>
     
     <item>
->>>>>>> Stashed changes
       <title>About Me</title>
-      <link>http://johnsigmon.me/about/</link>
+      <link>https://www.johnsigmon.me/about/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/about/</guid>
+      <guid>https://www.johnsigmon.me/about/</guid>
       <description>My name is John Sigmon and I am currently a data engineer. I am passionate about:
  Creating useful things Sharing what I know Learning more about myself and the world Finding my limits in athletic activities  I like thinking about what drives me and the people around me. I love learning new things and mastering them as well as being challenged mentally and physically. I have previously worked as an auto repair technician (where I started and owned a shop), a bartender, and in many other jobs and industries.</description>
     </item>
     
     <item>
       <title>Bash Tips</title>
-      <link>http://johnsigmon.me/technical-writing/bash-tips/</link>
+      <link>https://www.johnsigmon.me/technical/bash-tips/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/technical-writing/bash-tips/</guid>
+      <guid>https://www.johnsigmon.me/technical/bash-tips/</guid>
       <description>Redirects All those fun redirect operators are outlined really well in this Stack Overflow post.
 Grep, Awk, and Sed Grep is one of the most flexible and useful Linux utilities, Awk is actually a full blown programming language, and Sed isn&amp;rsquo;t too bad either. This 9 page overview gives some good tips to get started without being overly long and verbose.
 Comparison Operators The cases of comparing strings versus comparing variables are handled a little differently in bash.</description>
@@ -66,48 +63,53 @@ Comparison Operators The cases of comparing strings versus comparing variables a
     
     <item>
       <title>Choosing Our Own Fate</title>
-      <link>http://johnsigmon.me/writing/choosing-our-own-fate/</link>
+      <link>https://www.johnsigmon.me/writing/choosing-our-own-fate/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/writing/choosing-our-own-fate/</guid>
+      <guid>https://www.johnsigmon.me/writing/choosing-our-own-fate/</guid>
       <description>I&amp;rsquo;ve been thinking about death in climbing and more generally why people climb and how this relates to our course in life. In the HBO series Westworld there is a quote about how death is true, and another quote about how we must all be allowed to choose our own fate. What is it that drives us to climb even though you can die while doing it? Part of the value in it for me is to know my limits and to push myself.</description>
     </item>
     
     <item>
       <title>Climbing, Mountaineering, and Skiing Videos</title>
-      <link>http://johnsigmon.me/writing/climbing-and-mountaineering-videos/</link>
+      <link>https://www.johnsigmon.me/writing/climbing-and-mountaineering-videos/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/writing/climbing-and-mountaineering-videos/</guid>
-      <description>  During the COVID-19 pandemic of 2020 I started compiling a list of (mostly) free climbing, mountaineering, and skiing videos. The Google Doc is embedded below. If you want to make suggestions, navigate to the document and add a comment. Enjoy!  </description>
+      <guid>https://www.johnsigmon.me/writing/climbing-and-mountaineering-videos/</guid>
+      <description>During the COVID-19 pandemic of 2020 I started compiling a list of (mostly) free climbing, mountaineering, and skiing videos. I created a Google Doc that is available here. I will occasionally sync this document with the Google Doc. If you want to make suggestions, navigate to the document and add a comment. Enjoy!
+ Climbing Brad Gobright in Indian Creek
+https://youtu.be/Eu3oHu42J4s
+Brad Gobright and Ben Hanna Red Rock
+https://youtu.be/UrLIPfiBuKk
+Russ Clune BD</description>
     </item>
     
     <item>
       <title>Favorite Quotes From Dune</title>
-      <link>http://johnsigmon.me/writing/favorite-dune-quotes/</link>
+      <link>https://www.johnsigmon.me/writing/favorite-dune-quotes/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/writing/favorite-dune-quotes/</guid>
+      <guid>https://www.johnsigmon.me/writing/favorite-dune-quotes/</guid>
       <description>If you have not read Dune, drop what you are doing and go read it right now. It is a classic for a reason. Dune effortlessly blends scifi with economics, sociology, environmentalism, and religion. It is truly a masterpiece of writing.
 I recently re-read it, and took down some of my favorite quotes into an iPhone note. This post is simply the transcription of those quotes. Page numbers refer to my copy which is the 50th anniversary edition.</description>
     </item>
     
     <item>
       <title>Following Inspiration</title>
-      <link>http://johnsigmon.me/writing/following-my-inspiration/</link>
+      <link>https://www.johnsigmon.me/writing/following-my-inspiration/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/writing/following-my-inspiration/</guid>
+      <guid>https://www.johnsigmon.me/writing/following-my-inspiration/</guid>
       <description>For me, life has always been about doing what inspires me, in some way shape or form. I often had to compromise what inspired me in order to survive and pay my bills, and what inspired me was not even always legal. Regardless, I have always been too stubborn to not do what I wanted.
 When I reflect on the influence this behavior has had in my life, I can find its influence early on.</description>
     </item>
     
     <item>
       <title>Git Tips</title>
-      <link>http://johnsigmon.me/technical-writing/git-tips/</link>
+      <link>https://www.johnsigmon.me/technical/git-tips/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/technical-writing/git-tips/</guid>
+      <guid>https://www.johnsigmon.me/technical/git-tips/</guid>
       <description>Basic Git Usage A great reference for basic git usage, including push, pull, merge, and other operations is Travis Swicegood&amp;rsquo;s &amp;ldquo;Pragmatic Guide to Git&amp;rdquo;.
 Julia Evans also has a wonderful and easy to understand introduction to solving common user errors within git in a comic format. You can find her work here.
 The .gitignore Atlassian provides a great tutorial on .gitignore files here explaining what they are and how to use them.</description>
@@ -115,20 +117,21 @@ The .gitignore Atlassian provides a great tutorial on .gitignore files here expl
     
     <item>
       <title>Grading On A Curve Is Bad</title>
-      <link>http://johnsigmon.me/writing/grading-on-a-curve/</link>
+      <link>https://www.johnsigmon.me/writing/grading-on-a-curve/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/writing/grading-on-a-curve/</guid>
+      <guid>https://www.johnsigmon.me/writing/grading-on-a-curve/</guid>
       <description>It frees students from responsibility It frees professors from responsibility It is not representative of life It discourages collaboration  As a current undergraduate in electrical engineering at UT Austin, I may appear biased. I do not deny that possibility. I will say that grading on a curve never made sense to me, and my observations have allowed me to better articulate why. I hope to convince you that grading on a curve is objectively bad.</description>
     </item>
     
     <item>
       <title>Time and Money</title>
-      <link>http://johnsigmon.me/writing/time-and-money/</link>
+      <link>https://www.johnsigmon.me/writing/time-and-money/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://johnsigmon.me/writing/time-and-money/</guid>
-      <description>Time is the most valuable thing that anyone can ever &amp;ldquo;possess&amp;rdquo;. Money’s primary value is to buy you more time. Money can buy you more time when you outsource household chores or labor, have the freedom to take a part time job, have the freedom to start a company or non-profit, or even when you retire. Due to my belief, I sometimes cause myself trouble by passing judgement on those that waste their time.</description>
+      <guid>https://www.johnsigmon.me/writing/time-and-money/</guid>
+      <description>Time is the most valuable thing that anyone can ever &amp;ldquo;possess&amp;rdquo;. Money’s primary value is to buy you more time. Money can buy you more time when you outsource household chores or labor, have the freedom to take a part time job, have the freedom to start a company or non-profit, or even when you retire.
+Due to my belief, I sometimes cause myself trouble by passing judgement on those that waste their time.</description>
     </item>
     
   </channel>
