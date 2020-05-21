@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+
+<base href="https://www.johnsigmon.me/">
+
+<title>
+  John Sigmon - Linting Your Python and Shell Scripts 
+</title>
+
+<meta name="generator" content="Hugo 0.69.0" />
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.johnsigmon.me/css/main.css">
+<link rel="stylesheet" href="https://www.johnsigmon.me/css/custom.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body lang="en-us">
+<div class="container">
+
+
+<header class="row text-left title">
+  <h1 class="title">Linting Your Python and Shell Scripts</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+        PUBLISHED ON MAY 7, 2020 
+      
+      
+      
+      —
+      
+      
+      <a class="meta" href="/categories/bash">BASH</a>, 
+      
+      <a class="meta" href="/categories/development">DEVELOPMENT</a>, 
+      
+      <a class="meta" href="/categories/linting">LINTING</a>, 
+      
+      <a class="meta" href="/categories/python">PYTHON</a>
+      
+      
+      
+    </h6>
+  </div>
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+    <h2 id="linting-vs-testing">Linting vs Testing</h2>
+<p>Linting is a &ldquo;static&rdquo; test in the sense that it doesn&rsquo;t run or execute any code. It analyzes the file(s) looking for <a href="https://martinfowler.com/bliki/CodeSmell.html">code smells</a> and what the linter considers poor style.</p>
+<p>On the other hand, tests actually execute some code and are looking to assert that functions have the correct output given some predefined input. In particular, unit tests typically test small functions and should be atomic and not dependent on each other. Unit tests are typically used when you want to provide a way to make sure you have not broken any logic in the system when you make changes or additions. Other common tests are acceptance tests, integration tests, and UI tests, and they are all out of the scope of this post.</p>
+<p>It is quite common for a linter or code formatter to be installed in a project with many developers so that code remains homogenous. A project becomes much easier to maintain when there is only one style of code within it. Linters are typically either part of the test or build process, and developers can run them on their local workstation before committing their code to a build branch.</p>
+<h2 id="pylint">Pylint</h2>
+<h3 id="overview">Overview</h3>
+<p>There are quite a few Python linters available. One of the more popular ones is pylint. Pylint can be a great way to start out but its greatest advantage is also its greatest downfall: its extreme configurability. If you don&rsquo;t take the time to configure it it will spit endless streams of error messages at you that you do not care about. We are going to solve this by creating a <code>.pylintrc</code> for the project. I would recommend creating one for each project in case you want to configure things differently for different proects. This file will tell pylint which errors that you wish to ignore.</p>
+<h3 id="installation">Installation</h3>
+<p>You can install pylint with pip like so:</p>
+<pre><code>pip install pylint
+</code></pre><h3 id="usage">Usage</h3>
+<p>When you want to run pylint you can point it to either a directory or a single file:</p>
+<pre><code>pylint my_directory/
+# or
+pylint my_module.py
+</code></pre><p>Pylint will then spit out a report with all of your errors. It may look something like this:</p>
+<pre><code>$ pylint unit_tests.py
+************* Module unit_tests
+unit_tests.py:115:2: W0511: TODO read in 2D outputs from mfcc and pass them in. (fixme)
+unit_tests.py:13:19: C0326: Exactly one space required after comma
+INPUT_SIZE = (1, 98,32)
+                   ^ (bad-whitespace)
+unit_tests.py:44:0: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:48:0: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:77:0: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:88:50: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:93:0: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:117:11: C0326: Exactly one space required around comparison
+if __name__==&quot;__main__&quot;:
+           ^^ (bad-whitespace)
+unit_tests.py:119:0: C0303: Trailing whitespace (trailing-whitespace)
+unit_tests.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+unit_tests.py:9:0: E0401: Unable to import 'coremltools' (import-error)
+unit_tests.py:10:0: E0401: Unable to import 'tensorflow' (import-error)
+unit_tests.py:11:0: E0401: Unable to import 'tensorflow.core.framework' (import-error)
+unit_tests.py:26:0: C0116: Missing function or method docstring (missing-function-docstring)
+unit_tests.py:29:0: C0115: Missing class docstring (missing-class-docstring)
+unit_tests.py:38:4: C0116: Missing function or method docstring (missing-function-docstring)
+unit_tests.py:39:43: C0103: Variable name &quot;f&quot; doesn't conform to snake_case naming style (invalid-name)
+unit_tests.py:45:4: C0116: Missing function or method docstring (missing-function-docstring)
+unit_tests.py:56:0: C0115: Missing class docstring (missing-class-docstring)
+unit_tests.py:85:4: C0116: Missing function or method docstring (missing-function-docstring)
+unit_tests.py:96:8: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+unit_tests.py:4:0: W0611: Unused import os (unused-import)
+unit_tests.py:11:0: W0611: Unused graph_pb2 imported from tensorflow.core.framework (unused-import)
+
+-----------------------------------
+Your code has been rated at 5.83/10
+</code></pre><p>This report will tell you which line is giving the error, and what the error is. The error codes identify the specific error associated with that line. For example, the error code <code>C0303</code> tells the user that there is trailing whitespace. If you wish to disable an error for a specific line, but not project wide, you may do so by inserting a comment into the code to tell pylint to skip that error:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># pylint: disable=C0303</span>
+foo <span style="color:#f92672">=</span> bar() <span style="color:#75715e"># A line with the C0303 error</span>
+</code></pre></div><h3 id="pylintrc"><code>.pylintrc</code></h3>
+<p>Disabling an error project wide is done by amending the <code>.pylintrc</code> file. First you need to create a <code>.pylintrc</code> file for your project:</p>
+<pre><code>pylint --generate-rcfile &gt; &lt;project home&gt;/.pylintrc
+</code></pre><p>This creates a file with all the options present. For the same error as above, you would navigate to the correct section of the file, which is <code>[MESSAGES CONTROL]</code> in this case. Put the following line there:</p>
+<pre><code>disable=C0303
+</code></pre><p>That&rsquo;s it! You can do more complicated regex to allow and disallow specific things as needed. If you want some more info on using the <code>.pylintrc</code> the documentation is <a href="http://pylint.pycqa.org/en/latest/user_guide/options.html">here</a>.</p>
+<p>Now that you have your <code>.pylintrc</code> working, you need to point to it when you run pylint:</p>
+<pre><code>pylint --rcfile=/path/to/rcfile module.py
+</code></pre><p>Pylint is extremely popular and flexible, but there are certainly other options out there: <a href="https://github.com/PyCQA/pyflakes">pyflakes</a>, <a href="https://flake8.pycqa.org/en/latest/">Flake8</a>, and <a href="https://pylama.readthedocs.io/en/latest/">Pylama</a> are a few other popular ones.</p>
+<h2 id="black">Black</h2>
+<p><a href="https://github.com/psf/black">Black</a> is arguably not even a linter, but it is interesting enough that it deserves a mention. Black is less linter and more <em>code formatter</em>. This means that unlike pylint, it is not configurable and therefore highly opinionated. If you are okay with the opinions built into Black then it is a great alternative and is much simpler to use.</p>
+<p>To install Black you can run:</p>
+<pre><code>pip install black
+</code></pre><p>It is worth noting that Python 3.6.0+ is required to run Black.</p>
+<p>Usage is straightforward:</p>
+<pre><code>black module.py
+# or
+black directory/
+</code></pre><p>When you run Black on a file it formats it for you to its preferred format, no questions asked. This means your source code file will be changed, and you will get no error report!</p>
+<p>I would love to hear opinions on Black if anyone is using it! Feel free to email me (<a href="mailto:johnsigmon@gmail.com">johnsigmon@gmail.com</a>).</p>
+<h2 id="shellcheck">ShellCheck</h2>
+<p>I can&rsquo;t write anything about linting and not take the opportunity to plug my favorite linter which is <a href="https://github.com/koalaman/shellcheck">ShellCheck</a>. ShellCheck is used for linting shell scripts. I have found it extremely valuable and I learned quite a bit about Unix-style shell scripting from using it. The errors are not excessive, they are helpful and provide explanations. It is extremely well documented and extremely easy to use. It can be helpful for shell script authors of all skill levels.</p>
+<p>You can install it with your standard Unix package manager:</p>
+<pre><code># For Ubuntu
+apt-get install shellcheck
+
+# For Mac
+brew install shellcheck
+</code></pre><p>Usage is straightforward as well:</p>
+<pre><code>shellcheck script.sh
+</code></pre><p>It gives an error report similiar to pylint:</p>
+<pre><code>$ shellcheck deploy.sh
+In deploy.sh line 29:
+ --trigger-resource $TIRGGERSOURCE \
+                    ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In deploy.sh line 33:
+ --env-vars-file $ENVFILENAME
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+</code></pre><p>Each error has its own <strong>fantastic</strong> page in the shellcheck documentation (it usually pulls up by putting the error code in Google.) For instance, <code>SC2086</code> has a full explanation <a href="https://github.com/koalaman/shellcheck/wiki/SC2086">here</a>.</p>
+<p>If you wish to disable errors, you can do so in the same manner as pylint:</p>
+<pre><code># shellcheck disable=SC2016
+offending line = $unquotedvar
+</code></pre><h2 id="searching-for-todos">Searching for TODOs</h2>
+<p>Pylint will automatically find &ldquo;TODO&rdquo; statements and warn you about them. However ShellCheck will not, and pylint may miss some types of &ldquo;TODO&quot;s. I found it useful enough to check for this that I created a script to do so:</p>
+<script type="application/javascript" src="https://gist.github.com/jsigee87/e78a80d7c1595efb9854d003abdb3ab7.js"></script>
+
+<p>The script finds all files ending in <code>.py</code> and <code>.sh</code> in the directory you point to, while ignoring any <code>.env</code> directories. It then looks for any &ldquo;TODO&rdquo; or &ldquo;FIXME&rdquo; in a case insensitive manner. The <code>grep</code> output is then annotated with the word &ldquo;Warning&rdquo; (in case you want to add this as a compile time script in another project with compiled code) and printed to the terminal.</p>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://www.johnsigmon.me/technical/jq/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/technical">technical</a></span>
+  
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://www.johnsigmon.me/">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  <hr />
+  
+</footer>
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
+
+
