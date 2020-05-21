@@ -1,6 +1,6 @@
 ---
 title: "My Battle With Chronic Pain"
-date: 2020-05-20
+date: 2020-05-19
 toc: false
 ---
 
@@ -10,7 +10,7 @@ This writing is about the details of my sufferings with a repetitive strain inju
 
 ## Onset
 
-In the spring of 2018 I was in school full time. As usual, I was taking too many courses. I spent 8 to 10 hours a day at the computer, 7 days a week. Having never learned proper seated desk ergonomics [^1](/writing/my-battle-with-chronic-pain/#fn:1). I was doing it all wrong.[^2] The other contributing factor was that I was in classes, not work. At a job you may spend a lot of time reviewing, maintaining, and planning code. With classes I had assignment after assignment, which meant hours and hours of _typing_.
+In the spring of 2018 I was in school full time. As usual, I was taking too many courses. I spent 8 to 10 hours a day at the computer, 7 days a week. Having never learned proper seated desk ergonomics [^1]. I was doing it all wrong.[^2] The other contributing factor was that I was in classes, not work. At a job you may spend a lot of time reviewing, maintaining, and planning code. With classes I had assignment after assignment, which meant hours and hours of _typing_.
 
 As a result, my hands and wrist started hurting on a daily basis. Normally I took spring break off so my body at least had a week off, but  that year I stayed home to work. Without a single day off for months I was in constant pain that extended from my hands into my shoulders by the end of May 2018. I took two weeks off to go hiking and hoped the time off would let my body heal. There was no change. The situation started to look bleak.
 
