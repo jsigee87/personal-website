@@ -1,6 +1,6 @@
 ---
 title: "My Battle With Chronic Pain"
-date: 2020-05-20
+date: 2020-05-24
 toc: false
 ---
 
@@ -12,15 +12,15 @@ This writing is about the details of my sufferings with a repetitive strain inju
 
 In the spring of 2018 I was in school full time. As usual, I was taking too many courses. I spent 8 to 10 hours a day at the computer, 7 days a week. Having never learned proper seated desk ergonomics, I was doing it all wrong.[^2] The other contributing factor was that I was in classes, not work. At a job you may spend a lot of time reviewing, maintaining, and planning code. With classes I had assignment after assignment, which meant hours and hours of _typing_.
 
-As a result, my hands and wrist started hurting on a daily basis. Normally I took spring break off so my body at least had a week off, but  that year I stayed home to work. Without a single day off for months I was in constant pain that extended from my hands into my shoulders by the end of May 2018. I took two weeks off to go hiking at the end of the semester. I was mildly concerned but was confident that a few weeks off would be plenty of time for my body to heal. On the way home at the end of my trip I realized there was no change and my situation started to look bleak.
+As a result, my hands and wrists started hurting on a daily basis. My wrists ached and my hands and forearms felt as if they were overexerted and constantly sore, although the pain was so vague it would be months before I could articulate that correctly. Normally I took spring break off so my body at least had a week off, but that year I stayed home to work. Without a single day off for months I was in constant pain that extended from my hands into my shoulders by the end of May 2018. I took two weeks off to go hiking at the end of the semester. I was mildly concerned but was confident that a few weeks off would be plenty of time for my body to heal. On the way home at the end of my trip I realized there was no change and my situation started to look bleak.
 
 ## Decline
 
 Over the summer my condition worsened. The first doctor told me that I had carpal tunnel, which in retrospect was obviously wrong. I had compression of my ulnar nerve causing numbness in my pinky, while carpal tunnel causes numbness in the other fingers via compression of the median nerve. I saw another doctor a few weeks later who told me that behavior modifications and rest were the only cures. My summer internship along with weekend side projects and online classes kept me at the computer constantly, causing my symptoms and pain to spiral out of control. 
 
-By the end of the summer everyday tasks caused pain. Using my phone, writing, holding a book, vacuuming, and petting my cat were all sources of pain. My whole upper body deteriorated, my shoulders started to tense up and ache as much as my hands. In August of 2018 I used my internship money to purchase health insurance through the school and started physical therapy.[^3]
+By the end of the summer everyday tasks caused pain. Using my phone, writing, holding a book, vacuuming, and petting my cat were all sources of pain. My hands and forearms were constantly sore and ached. They felt as if there was a constant build up of lactic acid in them. My whole upper body deteriorated, my shoulders started to tense up and ache as much as my hands. In August of 2018 I used my internship money to purchase health insurance through the school and started physical therapy.[^3]
 
-My first PT (physical therapist) had no idea how to treat my hand issues but she went to work fixing my shoulder issues.[^4]  By October of 2018, about 8 months after I first noticed pain, I was not able to use a computer for more than a few minutes and relied heavily on voice recognition (which leaves a lot to be desired.) Luckily any software I had to write for school in those last two semesters I was able to do via pair programming.[^5] I had also started a new part-time job which required software development and I painfully managed 20 hours a week so I could pay my bills.
+My first PT (physical therapist) had no idea how to treat my hand issues but she went to work fixing my shoulder issues.[^4] By October of 2018, about 8 months after I first noticed pain, I was not able to use a computer for more than a few minutes and relied heavily on voice recognition (which leaves a lot to be desired.) Luckily any software I had to write for school in those last two semesters I was able to do via pair programming.[^5] I had also started a new part-time job which required software development and I painfully managed 20 hours a week so I could pay my bills.
 
 In the fall of 2018 I also started with a massage therapist[^6] and acupuncturist.[^7] The acupuncture helped quite a bit at first, if for no other reason than to force me to rest and relax for a few minutes. The massage therapist found muscles in my upper body that I didn’t know existed, and the first few sessions were so painful that I struggled to breath. My body soon adjusted and loosened up, and continuing that work became a critical part of my learning more body awareness.
 
@@ -31,6 +31,7 @@ Several times with the PT I was told I was doing an exercise wrong after I had b
 By the beginning of 2019, morale was low and the future looked more barren than ever. I had some moderate progress with my shoulders but the reality that my life was permanently altered had settled in. I was grappling with the future and trying to understand how I could even go to work as an engineer in a few months. I wasn't sure what my life would look like.
 
 ## Recovery
+
 I finally began to realize that I was going to have to take control of my own recovery.[^8] I learned everything I could, starting with a basic anatomy textbook to figure out how my dysfunctional body parts worked and what the bones and muscles were called. From there I picked up the basic terminology needed to understand and review research papers and more intermediate texts. I dug into alternative treatments as well, learning about the Alexander technique and its variations.[^9]
 
 By mid-spring 2019 I felt strong enough to start yoga.[^10] I did beginner’s yoga videos everyday for 30 days and it helped me build strength, showed me where I was too flexible, and showed me where I needed to be more flexible. Yoga helped me gain awareness of my body and learn more about when I was being tense and using my body incorrectly. I started to realize that modifications in awareness were going to be my long-term solution, and that these modifications would be a life-long journey.
@@ -40,7 +41,8 @@ I was an uninsured student, but still knew I needed professional guidance. I sou
 By the end of the spring I had improved enough that I was thinking I just might be able to work full time. Luckily a flexible work schedule allowed me to shift my hours around and I found relief by doing a minimal amount of work on the weekends and Wednesday. This allowed me to have no more than two computer-heavy days in a row. The summer of 2019 was two steps forward and one step backward. I would notice improvements, and then regress, cueing an emotional rollercoaster each time. I was finally able to type again for longer periods of time, and started rock climbing again by the end of the summer. I trained to hike to the top of Mt. Whitney and gained much confidence and a better outlook on my health from my success there.[^12] I maintained the exercises that worked and would constantly surprise myself by doing an activity without pain that was previously difficult. Continued self massage, yoga, and work on my posture and body awareness was crucial in the small improvements I gained.
 
 ## Looking Forward
-By the end of 2019 I could occasionally use a computer for several hours without pain. As  usual, I pushed the boundaries by starting on side projects on the weekends, which led to regression. But even the ability to *begin* to think about using a computer for pleasure made me optimistic for the future again. I do my exercises almost everyday, and pay for it when I don’t. I still sometimes slump in my chair and catch myself tensed up into weird positions. But I have learned to be aware of these things and to value progress over perfection. 
+
+By the end of 2019 I could occasionally use a computer for several hours without pain. As usual, I pushed the boundaries by starting on side projects on the weekends, which led to regression. But even the ability to *begin* to think about using a computer for pleasure made me optimistic for the future again. I do my exercises almost everyday, and pay for it when I don’t. I still sometimes slump in my chair and catch myself tensed up into weird positions. But I have learned to be aware of these things and to value progress over perfection. 
 
 I would encourage anyone struggling with RSI to seek treatment and stop the overuse as soon as possible. Many RSI’s can cause permanent damage to the tendons and there is a lot that is not known about these conditions so it can be very difficult to find effective treatment. I cope mostly on my own faculty and I have seen almost a dozen medical professionals. Find someone to talk to about it as well- the emotional effects of a chronic disability can be quite harrowing.[^13]
 
@@ -52,7 +54,7 @@ I purposefully left out specific treatment details, as everyone’s body is diff
 
 [^3]: For anyone curious or with a medical background: at this point my symptoms included diffuse bilateral pain in the hands and elbows, cubital tunnel in the left limb resulting in numbness to the left pinkie finger, bilateral scapular dyskinesia, subluxation of the radius during forearm pronation, and weakness of the forearm extensors and intrinsic hand muscles.
 
-[^4]:  She said they were too far low and forward, not surprisingly a common complaint about the posture of computer users.
+[^4]: She said they were too far low and forward, not surprisingly a common complaint about the posture of computer users.
 
 [^5]: Huge thank you to Kate Baumli and Daniel Diamont.
 
