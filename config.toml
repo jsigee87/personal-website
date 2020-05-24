@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "John Sigmon"
 theme = "hugo-goa"
 toc = false
-relativeURLs = true
 
 [[menu.main]]
 name = "about"
