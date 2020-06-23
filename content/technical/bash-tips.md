@@ -7,6 +7,10 @@ categories:
 toc: false
 ---
 
+## Overview
+
+This post simply provides a grab bag of bash snippets that are unrelated and not enough to write a whole post on. Enjoy!
+
 ## Redirects
 
 All those fun redirect operators are outlined really well in this [Stack Overflow post](https://unix.stackexchange.com/questions/159513/what-are-the-shells-control-and-redirection-operators).
@@ -147,7 +151,7 @@ done
 
 You want someone to be able to run your script from multiple locations, but the script may need to move around within a repository to access different files. A simple and _relatively_ robust way to manage this is by figuring out the directory your script is located in, and `cd`-ing to that directory. This snippet should take care of that.
 
-This works by getting the script name from `$0`. For a more in depth discussion of this, see this [SO post](https://unix.stackexchange.com/questions/119929/will-0-always-include-the-path-to-the-script). For a very in depth discussion of the portability of this command and other options, see this [SP post](https://stackoverflow.com/questions/59895/how-to-get-the-source-directory-of-a-bash-script-from-within-the-script-itself).
+This works by getting the script name from `$0`. For a more in depth discussion of this, see this [SO post](https://unix.stackexchange.com/questions/119929/will-0-always-include-the-path-to-the-script). For a very in depth discussion of the portability of this command and other options, see this [SO post](https://stackoverflow.com/questions/59895/how-to-get-the-source-directory-of-a-bash-script-from-within-the-script-itself).
 
 ```bash
 cd $(dirname "$0")
@@ -155,7 +159,7 @@ cd $(dirname "$0")
 
 ## Using Shellcheck
 
-If you have never used it, [shellcheck](https://github.com/koalaman/shellcheck) is a fantastic shell linter. Install and set up is easy, there is no reason not to use it. I found it to be accurate and helpful, and definitely not too picky.
+If you have never used it, [shellcheck](https://github.com/koalaman/shellcheck) is a fantastic shell linter. Install and set up is easy, there is no reason not to use it. I find it to be accurate and helpful, and definitely not too picky.
 
 ## Iterating Over an Array
 
