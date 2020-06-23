@@ -60,7 +60,7 @@ I purposefully left out specific treatment details, as everyone’s body is diff
 
 [^6]: If you are in Austin I would highly recommend [Daniel Krenzelok](http://tinyretreatatx.com/).
 
-[^7]: Luckily there is a acupuncture clinic in Austin that provides discounted services in a group setting. If you are interested, their website is [here](http://www.napaustin.org).
+[^7]: Luckily there is an acupuncture clinic in Austin that provides discounted services in a group setting. If you are interested, their website is [here](http://www.napaustin.org).
 
 [^8]: Some books I found helpful along the way: [Clinically Oriented Anatomy](https://www.amazon.com/Clinically-Oriented-Anatomy-Keith-Moore/dp/1496347218/), [Kinesiology of the Musculoskeletal System](https://www.amazon.com/Kinesiology-Musculoskeletal-System-Foundations-Rehabilitation/dp/0323039898/), [Muscles: Testing and Function with Posture and Pain](https://www.amazon.com/Muscles-Testing-Function-Posture-Kendall/dp/0781747805/), [Repetitive Strain Injury](https://www.amazon.com/Repetitive-Strain-Injury-Computer-Users/dp/0471595330/), [It's Not Carpal Tunnel Syndrome!](https://www.amazon.com/Its-Carpal-Tunnel-Syndrome-Professionals/dp/0965510999/), and [The Roll Model](https://www.amazon.com/Roll-Model-Step-Step-Mobility-ebook/dp/B00P72KKN8/).
 
