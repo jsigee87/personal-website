@@ -4,6 +4,9 @@ title = "John Sigmon"
 theme = "hugo-goa"
 toc = false
 
+#disqusShortname = "disqus_HNztshqw4F"
+enableRobotsTXT = true
+
 [[menu.main]]
 name = "about"
 identifier = "about"
