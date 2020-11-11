@@ -3,16 +3,31 @@ title: "About Me"
 date: 2020-04-26
 ---
 
-My name is John Sigmon and I am currently a data engineer. I am passionate about:
+My name is John Sigmon and I am passionate about:
 
-1. Creating useful things
-2. Sharing what I know
-3. Learning more about myself and the world
-4. Finding my limits in athletic activities
+- Creating useful things
+- Sharing what I know
+- Learning more about myself and the world
+- Finding my limits in athletic activities
 
-I like thinking about what drives me and the people around me. I love learning new things and mastering them as well as being challenged mentally and physically. I have previously worked as an auto repair technician (where I started and owned a shop), a bartender, and in many other jobs and industries. I am an avid runner and rock climber (when my body cooperates.)
+I like thinking about what drives me and the people around me. I love learning new things and mastering them as well as being challenged mentally and physically. I have previously worked as an auto repair technician (where I started and owned a shop), a bartender, and in many other jobs and industries. I am also a rock climber, mountaineer, skier, and runner.
 
-You can find out more about me in my writing on this site, via my [resume](https://docs.google.com/document/d/1L_fsqtKILiTvK6PihnKdySmwBEJ3eiNjRKEItrcaz_Q/edit?usp=sharing), or via my social media accounts linked on my home page. 
+I’d love to chat with anyone on any of the following topics, among other things:
+- Quitting drinking or smoking
+- Becoming vegan, or eating less meat
+- Anything related to addiction or 12 step programs
+- Decision making and risk tolerances
+- The role of our ego in our choice of career or our everyday lives
+- Learning how to learn new things
+- Overcoming injury and physical adversities
+- Hiking, backpacking, climbing, skiing, mountaineering
+- Planning any such outdoor trips
+- Choosing gear related to any of the above outdoor activities
+- Mountain lions
+
+If you want to talk, feel free to create a time via this [Calendly link](https://calendly.com/johnsigmon1/chat).
+
+You can find out more about me via my writing on this site or my social media accounts linked on the home page. 
 
 ### About This Site
 
