@@ -14,6 +14,12 @@ weight = 200
 url = "/about/"
 
 [[menu.main]]
+name = "working with me"
+identifier = "working-with-me"
+weight = 200
+url = "/working-with-me/"
+
+[[menu.main]]
 name = "writing"
 identifier = "writing"
 weight = 200

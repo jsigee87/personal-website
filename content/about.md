@@ -1,6 +1,5 @@
 ---
 title: "About Me"
-date: 2020-04-26
 ---
 
 My name is John Sigmon and I am passionate about:
@@ -11,7 +10,7 @@ My name is John Sigmon and I am passionate about:
 - Finding my limits mentally and physically
 - Rock climbing, skiing, and mountaineering
 
-I’d love to chat with anyone or give advice on any of the following topics:
+I’d love to chat with anyone/give advice on any of the following topics:
 - Quitting drinking or smoking
 - Becoming vegan, or eating less meat
 - Anything related to addiction or 12 step programs
