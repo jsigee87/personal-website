@@ -34,5 +34,5 @@ You can find out more about me via my writing on this site or my social media ac
 
 This site is a work in progress. If you enjoyed something on this site and want to let me know or discuss it further, feel free to reach out via email. Constructive criticism, typos, etc. are always welcome and in fact appreciated.
 
-The website content is written in Markdown, and the site was created using [Hugo](https://gohugo.io/), which as a static site generation tool written in Go. I forked the [Goa](https://github.com/shenoybr/hugo-goa) theme. The website is hosted and deployed via [Netlify](https://www.netlify.com/).
+The website content is written in Markdown, and the site was created using [Hugo](https://gohugo.io/), which is a static site generation tool written in Go. I forked the [Goa](https://github.com/shenoybr/hugo-goa) theme. The website is hosted and deployed via [Netlify](https://www.netlify.com/).
 

@@ -18,7 +18,7 @@ I have worked with early stage startups, state agencies, and enterprise organiza
 
 2. Organizations of any size that want to
   * Add devops, automated deployment and/or testing, CI/CD
-  * Add natural language processing or computer vision to your product
+  * Add machine learning to your product or product line
   * Migrate your on-premise or other non-cloud databases to the cloud
   * Deploy a cloud provider across your entire organization
 
