@@ -61,6 +61,8 @@ Near the beginning of the trail, which was dry the day before and later that day
 
 <img src="https://i.imgur.com/IZWpe6Z.jpeg" width="600">
 
+![](https://i.imgur.com/IZWpe6Z.jpeg)
+
 <br>
 
 Setting a bootpack straight over what is normally a talus field.
