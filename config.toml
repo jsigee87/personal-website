@@ -31,6 +31,12 @@ identifier = "technical"
 weight = 200
 url = "/technical/"
 
+[[menu.main]]
+name = "outdoors"
+identifier = "outdoors"
+weight = 200
+url = "/outdoors/"
+
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
@@ -54,5 +60,5 @@ instagram = "jhnsigmon"
 linkedin = "john-sigmon"
 twitter = "JohnSigmon"
 #goodreads = "<username>"
-#strava = "<username>"
+strava = "47263412"
 email = "johnsigmon@gmail.com"
