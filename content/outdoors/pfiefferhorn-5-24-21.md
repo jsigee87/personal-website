@@ -59,36 +59,34 @@ Starting elevation was ~7,600 feet, and we turned around at ~10,360 feet. [Strav
 
 Near the beginning of the trail, which was dry the day before and later that day while descending.
 
-<img src="https://i.imgur.com/IZWpe6Z.jpeg" width="600">
-
 ![](https://i.imgur.com/IZWpe6Z.jpeg)
 
 <br>
 
 Setting a bootpack straight over what is normally a talus field.
 
-<img src="https://i.imgur.com/T2rqyeP.jpeg" width="600">
+![](https://i.imgur.com/T2rqyeP.jpeg)
 
 <br>
 
 Julia traversing through the trees below Red Pine Lake.
 
-<img src="https://i.imgur.com/0G2bq4J.jpeg" width="600">
+![](https://i.imgur.com/0G2bq4J.jpeg)
 
 <br>
 
 Red Pine Lake still pretty frozen over.
 
-<img src="https://i.imgur.com/YVfwaFY.jpeg" width="600">
+![](https://i.imgur.com/YVfwaFY.jpeg)
 
 <br>
 
 Up up up towards the ridge line.
 
-<img src="https://i.imgur.com/I3r7Y6C.jpeg" width="600">
+![](https://i.imgur.com/I3r7Y6C.jpeg)
 
 <br>
 
 Traversing around to the west side of the lake on the way back down.
 
-<img src="https://i.imgur.com/wRzE9p2.jpeg" width="600">
+![](https://i.imgur.com/wRzE9p2.jpeg)
