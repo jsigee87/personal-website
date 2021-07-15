@@ -1,6 +1,7 @@
 ---
-title: "Middle Teton Summit Attempt 6/9/21"
+title: "Middle Teton Summit Attempt"
 toc: false
+date: "2021-06-09"
 ---
 
 ---

@@ -1,6 +1,7 @@
 ---
-title: "Pfiefferhorn Summit Attempt 5/24/21"
+title: "Pfiefferhorn Summit Attempt"
 toc: false
+date: "2021-05-24"
 ---
 
 ---

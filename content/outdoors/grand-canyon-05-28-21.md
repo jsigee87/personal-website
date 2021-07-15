@@ -1,6 +1,7 @@
 ---
-title: "Grand Canyon - Escalante Route 5/28/21"
+title: "Grand Canyon - Escalante Route"
 toc: false
+date: "2021-05-28"
 ---
 
 ---
