@@ -10,23 +10,12 @@ My name is John Sigmon and I am passionate about:
 - Finding my limits mentally and physically
 - Rock climbing, skiing, and mountaineering
 
-I’d love to chat with anyone/give advice on any of the following topics:
-- Quitting drinking or smoking
-- Becoming vegan, or eating less meat
-- Anything related to addiction or 12 step programs
-- Decision making and risk tolerances
-- Changing careers and burnout
-- Going back to school as an adult (and the social and financial challenges)
-- Free will & consciousness
-- The role of our ego in our choice of career or our everyday lives
-- Learning how to learn new things
-- Overcoming injury and physical adversities
-- Hiking, backpacking, climbing, skiing, mountaineering
-- Planning any such outdoor trips
-- Choosing gear related to any of the above outdoor activities
-- Mountain lions
+I am currently taking some time off. I'd love to meet people interested in:
+- Collaborating on freelance or startup work
+- Going outside
+- Having interesting conversations about work and relationships and life
 
-If you want to talk, feel free to create a time via this [Calendly link](https://calendly.com/johnsigmon1/chat).
+You can reach me via Twitter DM, email, or [this](https://calendly.com/johnsigmon1/chat) Calendly link.
 
 You can find out more about me via my writing on this site or my social media accounts linked on the home page. 
 
