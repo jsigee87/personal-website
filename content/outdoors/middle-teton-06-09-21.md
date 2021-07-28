@@ -5,9 +5,6 @@ date: "2021-06-09"
 ---
 
 ---
-## Middle Teton Summit Attempt 6/9/21
-
----
 
 ## Overview
 
