@@ -14,7 +14,8 @@ I have worked with early stage startups, state agencies, and enterprise organiza
   *  Prototype proof of concepts
   *  Architect and/or develop software automation and CI/CD
   *  Plan or review cloud architecture and infrastructure
-  *  Creating engineering process to allows for rapid company growth
+  *  Integrate with the engineering team to define process, reducing developer friction 
+  *  Assist with documentation, including developer onboarding and knowledge bases/wikis
 
 2. Organizations of any size that want to
   * Add devops, automated deployment and/or testing, CI/CD
