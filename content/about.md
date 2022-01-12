@@ -10,7 +10,7 @@ My name is John Sigmon and I am passionate about:
 - Finding my limits mentally and physically
 - Rock climbing, skiing, and mountaineering
 
-I am currently taking some time off. I'd love to meet people interested in:
+I'd love to meet people interested in:
 - Collaborating on freelance or startup work
 - Going outside
 - Having interesting conversations about work and relationships and life
@@ -18,6 +18,10 @@ I am currently taking some time off. I'd love to meet people interested in:
 You can reach me via Twitter DM, email, or [this](https://calendly.com/johnsigmon1/chat) Calendly link.
 
 You can find out more about me via my writing on this site or my social media accounts linked on the home page. 
+
+### Some Things I've Done
+
+
 
 ### About This Site
 
