@@ -3,8 +3,6 @@ title: "Why Changing My Physical Environment is Good For Me"
 date: 2022-02-06
 ---
 
-# Why Changing My Physical Environment Is Good For Me
-
 We all can need different external motivators and influences at different points in our lives. Being able and willing to take a walk in a new park or even new country can have profound effects on our mental and emotional well being. For me the biggest positives of changing my environment are: preventing stagnation in my life, exploring new or different experiences, and moderating my behavior via the availability of experiences. I have recently found an interesting balance by traveling between SLC and NYC that motivated this perspective that I would like to share.
 
 Our brains are evolved to seek novelty. If we see or experience something in the same way day in and day out,our brains will learn to ignore it. This can happen with our physical space, the way we allocate our time, and the relationships we choose to maintain. 
